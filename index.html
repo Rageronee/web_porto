@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Muhammad Afnan Risandi - Mekatronika & AI</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased selection:bg-gray-900 selection:text-white transition-colors duration-300">
+
+    <div id="preview-container" class="project-preview hidden lg:flex">
+        <canvas id="preview-canvas" width="300" height="200"></canvas>
+    </div>
+
+    <nav class="fixed top-0 w-full z-40 glass-nav border-b border-gray-200/50 transition-all duration-300">
+        <div class="content-container py-5 flex justify-between items-center">
+            <span class="font-bold tracking-tight text-xs md:text-sm uppercase font-mono-custom reveal-text smooth-entry">M/AFNAN.RISANDI P0rtfol|o</span>
+            <div class="space-x-8 text-xs md:text-sm font-medium text-gray-600 hidden md:block">
+                <button onclick="scrollToSection('about')" class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.1s">About</button>
+                <button onclick="scrollToSection('works')" class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.1s">Projects</button>
+                <button onclick="scrollToSection('narrative')" class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.2s">Leadership</button>
+                <button onclick="scrollToSection('archives')" class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.3s">Education</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-container">
+        
+        <section id="statement" class="min-h-[85vh] flex flex-col justify-center mb-24 relative">
+            <div class="max-w-7xl">
+                <p class="text-sm text-gray-500 mb-10 font-mono-custom uppercase tracking-[0.2em] reveal-text smooth-entry" data-delay="0.0s">Mahasiswa Mekatronika & Kecerdasan Buatan</p>
+                
+                <h1 class="text-6xl md:text-8xl lg:text-[10rem] font-normal leading-[0.95] mb-12 text-gray-900 classical-h1" style="line-height: 0.85; margin-bottom: 2.5rem;">
+                    <span class="reveal-text smooth-entry block" data-delay="0.1s">Engineering</span>
+                    <span class="italic text-gray-700 reveal-text smooth-entry block" data-delay="0.2s">Intelligent</span>
+                    <span class="reveal-text smooth-entry block" data-delay="0.3s">and Robust Systems.</span>
+                </h1>
+
+                <div class="reveal-text smooth-entry flex flex-col md:flex-row gap-12 items-start mt-12 border-t border-gray-300 pt-10" data-delay="0.4s">
+                    <div class="max-w-2xl">
+                        <p class="text-lg md:text-2xl text-gray-600 font-light leading-snug mb-6">
+                            Saya menggabungkan keahlian hardware engineering dengan kecerdasan buatan untuk menciptakan solusi yang inovatif. Berpengalaman dalam <strong>pemrograman embedded systems</strong> dan <strong>computer vision</strong>, siap berkontribusi di lingkungan profesional yang dinamis.
+                        </p>
+                        <div class="mt-8 p-6 bg-gray-50 rounded-lg border-l-4 border-gray-900">
+                            <p class="text-base font-serif-custom italic text-gray-700 mb-2">
+                                "Innovation happens when engineering meets creativity."
+                            </p>
+                            <p class="text-sm text-gray-500 font-mono-custom">— Personal Motto</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:border-l border-gray-300 pl-6 pt-2">
+                        <span class="block text-xs font-mono-custom text-gray-400 mb-3 uppercase">Pendidikan</span>
+                        <p class="text-xl font-medium text-gray-900">Universitas Pendidikan Indonesia</p>
+                        <p class="text-sm text-gray-500 font-mono-custom">Sarjana Teknik (S-1)</p>
+                        <span class="block text-xs font-mono-custom text-gray-400 mb-3 uppercase mt-6">Status</span>
+                        <p class="text-sm text-gray-900 font-medium">Mencari Peluang Magang/Kerja</p>
+                        <p class="text-xs text-gray-500 font-mono-custom">Open to Opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="mb-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="reveal-text smooth-entry">
+                    <h2 class="text-4xl md:text-6xl classical-h1 font-normal tracking-tight mb-8">Tentang Saya</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-serif-custom mb-3 text-gray-900">Muhammad Afnan Risandi</h3>
+                            <p class="text-lg text-gray-600 font-light leading-relaxed">
+                                Seorang mahasiswa Mekatronika & Kecerdasan Buatan di Universitas Pendidikan Indonesia yang memiliki passion dalam menggabungkan teknologi hardware dengan kecerdasan buatan. Saya percaya bahwa inovasi terbaik muncul ketika engineering bertemu dengan kreativitas.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200">
+                            <p class="text-gray-600 leading-relaxed">
+                                Dengan pengalaman di berbagai organisasi mahasiswa dan proyek-proyek teknis, saya telah mengembangkan kemampuan dalam <strong>embedded systems programming</strong>, <strong>computer vision</strong>, dan <strong>machine learning</strong>. Selain itu, saya juga memiliki keahlian di bidang desain, fotografi, dan videografi yang membantu saya dalam menyampaikan ide-ide kompleks dengan cara yang lebih visual dan menarik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-text smooth-entry" data-delay="0.2s">
+                    <div class="relative">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-xl">
+                            <img src="https://via.placeholder.com/600x600/FAFAFA/737373?text=Muhammad+Afnan+Risandi" alt="Muhammad Afnan Risandi" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="w-full h-full flex items-center justify-center text-gray-400 font-serif-custom text-xl" style="display: none;">
+                                <div class="text-center">
+                                    <div class="text-6xl mb-4">👤</div>
+                                    <p>Muhammad Afnan Risandi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-gray-900 rounded-full opacity-10"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="mb-24">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-black pb-4">
+                <h2 class="text-4xl md:text-6xl classical-h1 font-normal tracking-tight reveal-text smooth-entry" data-delay="0.0s">Selected Projects</h2>
+                <div class="flex flex-col text-right mt-4 md:mt-0 reveal-text smooth-entry" data-delay="0.2s">
+                    <span class="text-xs font-mono-custom text-gray-500 uppercase">Hardskills in Action</span>
+                    <span class="text-sm text-gray-900">(Kuliah & Eksperimen)</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-3 hidden lg:block">
+                    <p class="text-sm font-serif-custom italic text-gray-500 leading-relaxed sticky top-32 reveal-text smooth-entry" data-delay="0.3s">
+                        Setiap proyek di bawah ini adalah bukti nyata dari kemampuan teknis saya. Dari robotika hingga machine learning, semuanya dibangun dengan pendekatan yang sistematis dan hasil yang terukur.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-9">
+                    <div class="w-full" id="project-list-container">
+                        <div class="grid grid-cols-12 pb-3 mb-6 border-b border-gray-300 text-xs font-mono-custom text-gray-400 uppercase tracking-wider dynamic-entry smooth-entry">
+                            <div class="col-span-1">No.</div>
+                            <div class="col-span-6 md:col-span-7">Project Title</div>
+                            <div class="col-span-3 md:col-span-2 text-right md:text-left">Tech Stack</div>
+                            <div class="col-span-2 text-right">Domain</div>
+                        </div>
+                        
+                        <ul id="project-list" class="flex flex-col">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="mb-24">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200 reveal-text smooth-entry">
+                    <h3 class="text-2xl font-serif-custom mb-4 text-gray-900">Visi</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Menjadi engineer yang mampu menghubungkan teknologi dengan kebutuhan nyata, menciptakan solusi yang berdampak positif bagi masyarakat melalui inovasi di bidang mekatronika dan kecerdasan buatan.
+                    </p>
+                </div>
+                <div class="p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200 reveal-text smooth-entry" data-delay="0.1s">
+                    <h3 class="text-2xl font-serif-custom mb-4 text-gray-900">Misi</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Terus belajar dan mengembangkan keahlian teknis, sambil membangun kemampuan leadership dan komunikasi untuk menjadi profesional yang holistik dan siap berkontribusi di industri.
+                    </p>
+                </div>
+                <div class="p-8 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl border border-gray-200 reveal-text smooth-entry" data-delay="0.2s">
+                    <h3 class="text-2xl font-serif-custom mb-4 text-gray-900">Nilai</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Precision, Innovation, dan Collaboration. Saya percaya bahwa kerja tim yang solid dan pendekatan yang sistematis adalah kunci untuk menghasilkan solusi yang luar biasa.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="narrative" class="mb-24">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+                <div class="md:col-span-4">
+                    <div class="prose prose-lg prose-neutral max-w-none">
+                        <h2 class="text-4xl classical-h1 font-normal mb-8 reveal-text smooth-entry">Leadership & Value</h2>
+                        <p class="text-lg font-serif-custom italic text-gray-800 mb-6 leading-snug reveal-text smooth-entry" data-delay="0.1s">
+                            "Kecerdasan buatan harus didampingi oleh kecerdasan emosional dan manajemen proyek yang teruji."
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-light reveal-text smooth-entry" data-delay="0.2s">
+                            Pengalaman saya memimpin tim di berbagai organisasi mahasiswa telah mengasah kemampuan dalam <strong>manajemen proyek</strong>, <strong>komunikasi efektif</strong>, dan <strong>pemecahan masalah</strong>. Saya percaya bahwa pendekatan engineering yang sistematis dapat diterapkan di berbagai aspek kehidupan profesional.
+                        </p>
+                        <div class="mt-8 p-6 bg-gray-100 rounded-lg reveal-text smooth-entry" data-delay="0.3s">
+                            <p class="text-base font-serif-custom italic text-gray-700 mb-2">
+                                "The best way to predict the future is to create it."
+                            </p>
+                            <p class="text-sm text-gray-500 font-mono-custom">— Peter Drucker</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-8">
+                    <div class="mb-16">
+                        <div class="flex justify-between items-end mb-6 border-b border-gray-200 pb-2 dynamic-entry smooth-entry">
+                            <h3 class="font-mono-custom text-xs text-gray-900 uppercase tracking-widest">Organizational Leadership Log</h3>
+                            <span class="text-xs text-gray-400 font-mono-custom">Management & Advocacy</span>
+                        </div>
+                        
+                        <div class="space-y-0" id="leadership-log">
+                        </div>
+                    </div>
+
+                    <div id="skills-matrix">
+                        <div class="flex justify-between items-end mb-6 border-b border-gray-200 pb-2 dynamic-entry smooth-entry">
+                            <h3 class="font-mono-custom text-xs text-gray-900 uppercase tracking-widest">Technical Skills Matrix</h3>
+                            <span class="text-xs text-gray-400 font-mono-custom">Core Competencies</span>
+                        </div>
+                        
+                        <div class="space-y-0" id="skill-items">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="archives" class="mb-24">
+            <div class="flex items-baseline justify-between border-b border-gray-200 pb-4 mb-8">
+                <div class="flex gap-4 items-baseline reveal-text smooth-entry">
+                    <h2 class="text-xl font-medium tracking-tight text-gray-900">Academic Track Record</h2>
+                    <span class="text-sm text-gray-400 hidden md:inline">Dasar Pembentukan Keahlian</span>
+                </div>
+                <span class="text-xs font-mono-custom text-gray-500 reveal-text smooth-entry" data-delay="0.1s">History</span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="education-items">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white mt-24">
+        <div class="content-container py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-serif-custom mb-6">Mari Terhubung</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya melalui email, GitHub, atau media sosial lainnya.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="mailto:muhammadafnanrisandi@gmail.com" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
+                            <span class="text-2xl">📧</span>
+                            <span class="group-hover:underline">muhammadafnanrisandi@gmail.com
+                            </span>
+                        </a>
+                        <a href="https://github.com/Rageronee" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
+                            <span class="text-2xl">💻</span>
+                            <span class="group-hover:underline">github.com/Rageronee</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-afnan-risandi-722066348/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
+                            <span class="text-2xl">💼</span>
+                            <span class="group-hover:underline">LinkedIn Profile</span>
+                        </a>
+                        <a href="https://www.instagram.com/_ragerone_/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
+                            <span class="text-2xl">📷</span>
+                            <span class="group-hover:underline">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif-custom mb-6">Quick Links</h3>
+                    <div class="space-y-4">
+                        <a href="#about" onclick="scrollToSection('about'); return false;" class="block text-gray-400 hover:text-white transition-colors">Tentang Saya</a>
+                        <a href="#works" onclick="scrollToSection('works'); return false;" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
+                        <a href="#narrative" onclick="scrollToSection('narrative'); return false;" class="block text-gray-400 hover:text-white transition-colors">Leadership & Skills</a>
+                        <a href="#archives" onclick="scrollToSection('archives'); return false;" class="block text-gray-400 hover:text-white transition-colors">Education</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2025 Muhammad Afnan Risandi. All rights reserved.</p>
+                <p class="mt-4 md:mt-0">Engineered with Precision & Structure.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

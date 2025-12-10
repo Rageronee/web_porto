@@ -1,0 +1,258 @@
+/* Base Typography Setup - FOKUS PADA SERIF KLASIK */
+:root {
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --bg-color: #FAFAFA;
+    --text-color: #111111; 
+    --accent-color: #737373;
+    --border-color: #e5e5e5;
+}
+
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* Prevent overlapping issues */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+.font-serif-custom { font-family: var(--font-serif); }
+.font-mono-custom { font-family: var(--font-mono); }
+.classical-h1 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.05em; 
+    font-weight: 400; 
+}
+
+/* Layout Grid yang Lebih Lega dan Terpusat */
+.content-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix spacing issues */
+main {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    margin-top: 0;
+}
+
+section {
+    margin-bottom: 6rem;
+    padding-top: 2rem;
+}
+
+section:last-of-type {
+    margin-bottom: 4rem;
+}
+
+/* Ensure proper spacing between sections */
+#statement {
+    padding-top: 4rem;
+    margin-bottom: 8rem;
+}
+
+#works {
+    margin-bottom: 6rem;
+}
+
+#vision {
+    margin-bottom: 6rem;
+}
+
+#narrative {
+    margin-bottom: 6rem;
+}
+
+#archives {
+    margin-bottom: 4rem;
+}
+
+/* NAVIGATION */
+.glass-nav {
+    background: rgba(250, 250, 250, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+
+/* --- ANIMATION STYLES (PREMIUM ENTRY) --- */
+
+/* Curve Transisi Keren */
+.smooth-entry { 
+    transition: all 0.9s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+/* Staggered Text Reveal (Hero dan Judul) - Fixed Blur */
+.reveal-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dynamic Entry (List Proyek & Matriks) - Fixed Blur */
+.dynamic-entry {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dynamic-entry.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Floating Animation untuk Cards */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient Shimmer Effect */
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+}
+
+/* Hover Premium untuk List Proyek - Enhanced */
+.project-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+}
+
+.project-item:hover::before {
+    left: 100%;
+}
+
+.project-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* Custom Cursor/Preview - Enhanced */
+.project-preview {
+    position: fixed;
+    pointer-events: none;
+    width: 300px;
+    height: 200px;
+    z-index: 50;
+    opacity: 0;
+    transform: scale(0.6) translate(-50%, -50%) rotateY(15deg);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.25); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+
+.project-preview.active {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotateY(0deg);
+}
+
+/* Smooth Scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Footer Styles */
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+/* About Section Photo */
+#about img {
+    transition: transform 0.3s ease;
+}
+
+#about:hover img {
+    transform: scale(1.02);
+}
+
+
+
+/* Smooth scroll indicator */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.scroll-indicator {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Enhanced gradient backgrounds */
+.gradient-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+
