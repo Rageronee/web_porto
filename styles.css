@@ -116,8 +116,8 @@ section:last-of-type {
 
 /* Staggered Text Reveal (Hero dan Judul) - Fixed Blur */
 .reveal-text {
-    opacity: 0;
-    transform: translateY(20px);
+    /* opacity: 0; DISABLE HIDDEN STATE TO FIX BLANK SCREEN */
+    /* transform: translateY(20px); */
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
         transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -129,8 +129,8 @@ section:last-of-type {
 
 /* Dynamic Entry (List Proyek & Matriks) - Fixed Blur */
 .dynamic-entry {
-    opacity: 0;
-    transform: translateX(-30px);
+    /* opacity: 0; DISABLE HIDDEN STATE TO FIX BLANK SCREEN */
+    /* transform: translateX(-30px); */
     transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
         transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
