@@ -174,10 +174,40 @@ section:last-of-type {
     animation: shimmer 3s infinite;
 }
 
+
 /* Hover Premium untuk List Proyek - Enhanced */
 .project-item {
     position: relative;
     overflow: hidden;
+    transition: background-color 0.2s ease;
+    align-items: center;
+    /* Center items vertically */
+}
+
+/* Badge Style */
+.tech-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border: 1px solid #e5e5e5;
+    border-radius: 999px;
+    /* Pill shape */
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #525252;
+    background-color: #fafafa;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.project-item:hover .tech-badge {
+    border-color: #d4d4d4;
+    background-color: #f5f5f5;
+}
+
+.project-item.active {
+    background-color: rgba(0, 0, 0, 0.02);
 }
 
 .project-item::before {
@@ -189,17 +219,80 @@ section:last-of-type {
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     transition: left 0.5s;
+    pointer-events: none;
 }
 
+
 .project-item:hover::before {
-    left: 100%;
+    /* left: 100%; Disable shine effect */
+    display: none;
 }
 
 .project-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    background-color: rgba(255, 255, 255, 0.3);
+    /* transform: translateY(-2px); Disable lift */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); Disable shadow */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Keep slight toggle indication */
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Project Details Dropdown */
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+    opacity: 0;
+    background-color: #fcfcfc;
+}
+
+.project-details.expanded {
+    max-height: 1000px;
+    /* Arbitrary large height */
+    opacity: 1;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.project-details-content {
+    padding: 1.5rem 0;
+    margin-left: 8.33%;
+    /* Match column offset approx */
+    margin-right: 2rem;
+}
+
+.visit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #111;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.visit-btn:hover {
+    background-color: #333;
+    transform: translateY(-1px);
+}
+
+.detail-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #737373;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.05em;
+}
+
+.detail-text {
+    font-size: 0.95rem;
+    color: #404040;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    max-width: 65ch;
 }
 
 
@@ -291,11 +384,7 @@ footer a {
     image-rendering: -webkit-optimize-contrast;
 }
 
-/* Optional: Elegant Entry Animation specifically for the image */
-.profile-image-container {
-    /* animation: imageFloat 1s ease-out backwards; Removed to fix visibility issue */
-    /* animation-delay: 0.3s; */
-}
+
 
 /* @keyframes imageFloat {
     from {
@@ -307,3 +396,80 @@ footer a {
         transform: translateY(0);
     }
 } */
+
+/* --- NETWORK & CYBER EFFECTS --- */
+
+/* Canvas Background */
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Behind everything */
+    pointer-events: none;
+    opacity: 0.6;
+    /* Higher opacity because lines are thin/light */
+}
+
+/* --- HIGH-IMPACT TYPOGRAPHY ANIMATIONS --- */
+
+/* Split Text Reveal (Word by Word) */
+.split-text-container {
+    /* overflow: hidden; Removed to prevent clipping descenders */
+    line-height: 1.5;
+}
+
+.split-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    /* Smooth slide up */
+    /* Premium Bezier Curve */
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.8s ease-out;
+    will-change: transform, opacity;
+}
+
+.split-text-container.visible .split-word {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Expanding Line Heading */
+.reveal-heading {
+    position: relative;
+    display: inline-block;
+}
+
+.reveal-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #111;
+    /* Main text color */
+    transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-heading.visible::after {
+    width: 100%;
+}
+
+/* Typewriter Effect (Applied to specific hero class if used) */
+.typewriter-cursor::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}

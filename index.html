@@ -16,9 +16,12 @@
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 
 <body class="antialiased selection:bg-gray-900 selection:text-white transition-colors duration-300">
+
+    <canvas id="matrix-bg" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
 
     <div id="preview-container" class="project-preview hidden lg:flex">
         <canvas id="preview-canvas" width="300" height="200"></canvas>
@@ -30,17 +33,20 @@
                 class="font-bold tracking-tight text-xs md:text-sm uppercase font-mono-custom reveal-text smooth-entry">M/AFNAN.RISANDI
                 P0rtfol|o</span>
             <div class="space-x-8 text-xs md:text-sm font-medium text-gray-600 hidden md:block">
-                <button onclick="scrollToSection('about')"
-                    class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.1s">About</button>
-                <button onclick="scrollToSection('works')"
-                    class="hover:text-black transition-colors reveal-text smooth-entry"
-                    data-delay="0.1s">Projects</button>
-                <button onclick="scrollToSection('narrative')"
-                    class="hover:text-black transition-colors reveal-text smooth-entry"
-                    data-delay="0.2s">Leadership</button>
-                <button onclick="scrollToSection('archives')"
-                    class="hover:text-black transition-colors reveal-text smooth-entry"
-                    data-delay="0.3s">Education</button>
+                <a href="#about" onclick="scrollToSection('about'); return false;"
+                    class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.1s">About</a>
+                <a href="#works" onclick="scrollToSection('works'); return false;"
+                    class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.1s">Projects</a>
+                <a href="#narrative" onclick="scrollToSection('narrative'); return false;"
+                    class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.2s">Leadership</a>
+                <a href="#archives" onclick="scrollToSection('archives'); return false;"
+                    class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.3s">Education</a>
+                <a href="/public/CV_Muhammad_Afnan_Risandi.pdf" download
+                    class="ml-4 px-4 py-2 bg-gray-900 text-white rounded hover:bg-black transition-all reveal-text smooth-entry inline-flex items-center gap-2"
+                    data-delay="0.4s">
+                    <span>Resume</span>
+                    <i class="ph ph-download-simple"></i>
+                </a>
             </div>
         </div>
     </nav>
@@ -330,7 +336,7 @@
         </div>
     </footer>
 
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
