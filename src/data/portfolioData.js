@@ -14,10 +14,10 @@ export const portfolioData = {
             details: {
                 desc: "Sebuah ode untuk efisiensi pelayanan. Mengubah antrian yang menjemukan menjadi pengalaman digital yang cair dan responsif. Di sini, humor (plesetan) bertemu dengan keamanan tingkat tinggi, menciptakan sistem yang tidak hanya aman, tapi juga manusiawi.",
                 features: [
-                    "Glassmorphism UI: Transparansi yang menenangkan",
-                    "Security Core: Benteng pertahanan anti-injeksi",
-                    "Realtime Pulse: Detak jantung antrian yang hidup",
-                    "Role-Based Harmony: Orkestrasi akses Admin & User"
+                    "Glassmorphism UI: Modern, transparent aesthetic user experience",
+                    "Security Core: SQL Injection protection & input sanitization",
+                    "Realtime Pulse: Live queue updates via WebSockets/Polling",
+                    "Role-Based Access: Granular Admin vs User permission system"
                 ]
             }
         },
@@ -34,9 +34,9 @@ export const portfolioData = {
             details: {
                 desc: "Mata digital yang belajar 'melihat' rasa. Mengajarkan mesin untuk memahami proses alami pematangan buah hanya lewat spektrum warna. Sebuah eksperimen sederhana tentang bagaimana silikon bisa memahami biologi.",
                 features: [
-                    "Instant Perception: Analisis visual seketika",
-                    "Color Psychology: Menerjemahkan RGB ke level kematangan",
-                    "Lightweight Intelligence: Kecerdasan tanpa beban server"
+                    "Instant Perception: <100ms client-side image processing",
+                    "Color Psychology: RGB/HSV analysis for maturity classification",
+                    "Serverless Architecture: Zero-latency local execution"
                 ]
             }
         },
@@ -53,9 +53,9 @@ export const portfolioData = {
             details: {
                 desc: "Etalase digital bagi para perajin cetak. Bukan sekadar katalog, melainkan jembatan antara ide klien dan tinta printer. Dashboard analitiknya menyingkap cerita di balik angka penjualan.",
                 features: [
-                    "Interactive Gallery: Panggung bagi produk cetak",
-                    "Data Storytelling: Visualisasi metrik bisnis",
-                    "Seamless Order Flow: Aliran pesanan tanpa hambatan"
+                    "Interactive Gallery: High-performance image masonry",
+                    "Data Storytelling: Sales visualization & business intelligence",
+                    "Seamless Order Flow: Optimized UX for higher conversion"
                 ]
             }
         },
@@ -72,9 +72,9 @@ export const portfolioData = {
             details: {
                 desc: "Penari di atas garis hitam. Menggunakan algoritma PID untuk menjaga keseimbangan yang presisi antara kecepatan dan akurasi. Robot ini bukan sekadar berjalan, ia 'merasakan' jalurnya.",
                 features: [
-                    "PID Algorithm: Matematika kestabilan gerak",
-                    "Rapid Response: Refleks mikrokontroler",
-                    "Path Optimization: Mencari efisiensi dalam kurva"
+                    "PID Algorithm: Proportional-Integral-Derivative tuning",
+                    "High-Speed Response: Optimized microcontroller cycle time",
+                    "Path Optimization: Adaptive speed control on curves"
                 ]
             }
         },
@@ -91,9 +91,9 @@ export const portfolioData = {
             details: {
                 desc: "Menyimak bisikan alam lewat sensor. Sistem ini mendengarkan suhu dan kelembaban, lalu membiarkan AI membisikkan kapan siklus kehidupan kompos telah paripurna. Perpaduan harmonis antara tanah dan *cloud*.",
                 features: [
-                    "Environmental Sensing: Peka terhadap perubahan mikro",
-                    "AI Prediction: Meramal waktu panen",
-                    "Digital Dashboard: Jendela ke proses organik"
+                    "Precision Sensing: DHT22 & Soil Moisture calibrate reading",
+                    "AI Prediction: Regression models for harvest timing",
+                    "Real-time Dashboard: Firebase-synced live graphing"
                 ]
             }
         },
@@ -110,9 +110,9 @@ export const portfolioData = {
             details: {
                 desc: "Merancang jembatan empati antara kurikulum IPA yang padat dan dunia imajinasi anak-anak. Prototipe ini bukan sekadar desain antarmuka, tapi sebuah studi tentang bagaimana interaksi manusia-komputer bisa memicu rasa ingin tahu.",
                 features: [
-                    "Child-Centric Design: Navigasi intuitif untuk jari kecil",
-                    "Gamification Logic: Belajar yang terasa seperti bermain",
-                    "High-Fidelity Interaction: Simulasi pengalaman native"
+                    "Child-Centric UI: Accessibility-first design patterns",
+                    "Gamification Logic: Engagement loops & reward systems",
+                    "High-Fidelity Proto: Fully interactive user flows"
                 ]
             }
         },
@@ -128,9 +128,9 @@ export const portfolioData = {
             details: {
                 desc: "Koreografi presisi dalam skala milimeter. Mengintegrasikan lengan robot Dobot dengan conveyor belt untuk simulasi industri. Sebuah tarian mekanis yang diatur oleh logika pemrograman yang ketat.",
                 features: [
-                    "Kinematics Mastery: Kontrol gerak presisi",
-                    "System Integration: Harmoni robot dan conveyor",
-                    "Pick & Place Logic: Otomasi tugas repetitif"
+                    "Kinematics Control: 6-Axis movement precision",
+                    "PLC Integration: Industrial-grade logic sequencing",
+                    "Automated Sortation: Computer-controlled pick & place"
                 ]
             }
         }
