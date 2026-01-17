@@ -3,7 +3,8 @@
 export function initAnimations() {
     setupScrollObserver();
     initPremiumAnimations(); // Existing hover effects
-    setupNetworkAnimation(); // Canvas background
+    setupScrollObserver();
+    initPremiumAnimations(); // Existing hover effects
     setupSplitText();        // Typography
 }
 
@@ -188,6 +189,12 @@ function setupSplitText() {
         // Skip complex structures if they aren't explicitly tagged
         if (el.children.length > 0 && !el.classList.contains('animate-text')) {
             // Basic check to minimize breaking
+        }
+
+        // Skip elements that contain children (like links <a>) to prevent breaking them
+        // unless they are explicitly marked with 'allow-split'
+        if (el.children.length > 0 && !el.classList.contains('allow-split')) {
+            return;
         }
 
         el.classList.add('split-text-container');

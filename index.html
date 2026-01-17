@@ -21,7 +21,7 @@
 
 <body class="antialiased selection:bg-gray-900 selection:text-white transition-colors duration-300">
 
-    <canvas id="matrix-bg" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
+
 
     <div id="preview-container" class="project-preview hidden lg:flex">
         <canvas id="preview-canvas" width="300" height="200"></canvas>
@@ -33,14 +33,14 @@
                 class="font-bold tracking-tight text-xs md:text-sm uppercase font-mono-custom reveal-text smooth-entry">M/AFNAN.RISANDI
                 P0rtfol|o</span>
             <div class="space-x-8 text-xs md:text-sm font-medium text-gray-600 hidden md:block">
-                <a href="#about" onclick="scrollToSection('about'); return false;"
-                    class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.1s">About</a>
-                <a href="#works" onclick="scrollToSection('works'); return false;"
-                    class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.1s">Projects</a>
-                <a href="#narrative" onclick="scrollToSection('narrative'); return false;"
-                    class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.2s">Leadership</a>
-                <a href="#archives" onclick="scrollToSection('archives'); return false;"
-                    class="hover:text-black transition-colors reveal-text smooth-entry" data-delay="0.3s">Education</a>
+                <a href="#about" class="hover:text-black transition-colors reveal-text smooth-entry"
+                    data-delay="0.1s">About</a>
+                <a href="#works" class="hover:text-black transition-colors reveal-text smooth-entry"
+                    data-delay="0.1s">Projects</a>
+                <a href="#narrative" class="hover:text-black transition-colors reveal-text smooth-entry"
+                    data-delay="0.2s">Leadership</a>
+                <a href="#archives" class="hover:text-black transition-colors reveal-text smooth-entry"
+                    data-delay="0.3s">Education</a>
                 <a href="/public/CV_Muhammad_Afnan_Risandi.pdf" download
                     class="ml-4 px-4 py-2 bg-gray-900 text-white rounded hover:bg-black transition-all reveal-text smooth-entry inline-flex items-center gap-2"
                     data-delay="0.4s">
@@ -58,10 +58,10 @@
                 <p class="text-sm text-gray-500 mb-10 font-mono-custom uppercase tracking-[0.2em] reveal-text smooth-entry"
                     data-delay="0.0s">Mahasiswa Mekatronika & Kecerdasan Buatan</p>
 
-                <h1 class="text-6xl md:text-8xl lg:text-[10rem] font-normal leading-[0.95] mb-12 text-gray-900 classical-h1"
-                    style="line-height: 0.85; margin-bottom: 2.5rem;">
-                    <span class="reveal-text smooth-entry block" data-delay="0.1s">Engineering</span>
-                    <span class="italic text-gray-700 reveal-text smooth-entry block"
+                <h1
+                    class="text-6xl md:text-8xl lg:text-[9rem] font-normal leading-tight mb-12 text-gray-900 classical-h1">
+                    <span class="reveal-text smooth-entry block mb-2" data-delay="0.1s">Engineering</span>
+                    <span class="italic text-gray-700 reveal-text smooth-entry block mb-2"
                         data-delay="0.2s">Intelligent</span>
                     <span class="reveal-text smooth-entry block" data-delay="0.3s">and Robust Systems.</span>
                 </h1>
@@ -94,49 +94,56 @@
             </div>
         </section>
 
-        <section id="about" class="mb-24">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="reveal-text smooth-entry">
-                    <h2 class="text-4xl md:text-6xl classical-h1 font-normal tracking-tight mb-8">Tentang Saya</h2>
-                    <div class="space-y-6">
-                        <div>
-                            <h3 class="text-2xl font-serif-custom mb-3 text-gray-900">Muhammad Afnan Risandi</h3>
-                            <p class="text-lg text-gray-600 font-light leading-relaxed">
-                                Seorang mahasiswa Mekatronika & Kecerdasan Buatan di Universitas Pendidikan Indonesia
-                                yang memiliki passion dalam menggabungkan teknologi hardware dengan kecerdasan buatan.
-                                Saya percaya bahwa inovasi terbaik muncul ketika engineering bertemu dengan kreativitas.
-                            </p>
-                        </div>
-                        <div class="pt-4 border-t border-gray-200">
-                            <p class="text-gray-600 leading-relaxed">
-                                Dengan pengalaman di berbagai organisasi mahasiswa dan proyek-proyek teknis, saya telah
-                                mengembangkan kemampuan dalam <strong>embedded systems programming</strong>,
-                                <strong>computer vision</strong>, dan <strong>machine learning</strong>. Selain itu,
-                                saya juga memiliki keahlian di bidang desain, fotografi, dan videografi yang membantu
-                                saya dalam menyampaikan ide-ide kompleks dengan cara yang lebih visual dan menarik.
-                            </p>
-                        </div>
+        <section id="about" class="mb-32">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <!-- Column 1: Text -->
+                <div class="reveal-text smooth-entry flex flex-col justify-center order-2 md:order-1">
+                    <div class="mb-10">
+                        <h1
+                            class="text-4xl md:text-5xl font-serif-custom font-medium text-gray-900 mb-4 tracking-tight">
+                            Muhammad Afnan Risandi
+                        </h1>
+                        <p class="text-sm font-mono-custom text-gray-500 uppercase tracking-[0.25em] mb-8">
+                            Engineering • Art • Intelligence
+                        </p>
+
+                        <p class="text-xl md:text-3xl text-gray-800 font-serif-custom italic leading-relaxed mb-8">
+                            "Saya percaya <span class="text-black border-b border-black">teknologi</span> adalah puisi
+                            yang ditulis dengan <span class="text-black border-b border-black">logika</span>."
+                        </p>
+                    </div>
+
+                    <div class="pt-8 border-t border-gray-200">
+                        <p class="text-gray-600 leading-loose font-light text-lg">
+                            Berdiri di persimpangan antara <strong
+                                class="font-semibold text-gray-900 bg-gray-100 px-2 rounded-sm">ketajaman
+                                teknik</strong> dan <strong
+                                class="font-semibold text-gray-900 bg-gray-100 px-2 rounded-sm">intuisi seni</strong>.
+                            Sebagai mahasiswa Mekatronika & AI, saya tidak hanya merakit robot atau melatih model; saya
+                            merancang <span class="italic text-gray-800">pengalaman</span> yang memanusiakan data.
+                        </p>
                     </div>
                 </div>
-                <div class="reveal-text smooth-entry flex justify-center md:justify-end" data-delay="0.2s">
-                    <div class="profile-image-container relative w-full max-w-md mx-auto md:mx-0">
-                        <!-- Decorative Elements -->
-                        <div class="absolute inset-0 border-2 border-gray-900 translate-x-4 translate-y-4 z-0"></div>
-                        <div class="absolute inset-0 bg-gray-100 -translate-x-4 -translate-y-4 z-0"></div>
+
+                <!-- Column 2: Image -->
+                <div class="reveal-text smooth-entry flex justify-center items-center order-1 md:order-2"
+                    data-delay="0.2s">
+                    <div class="profile-image-container relative w-72 h-72 md:w-96 md:h-96">
+                        <!-- Decorative Orbits -->
+                        <div
+                            class="absolute inset-0 rounded-full border border-gray-200 scale-110 opacity-60 animate-[spin_20s_linear_infinite]">
+                        </div>
+                        <div
+                            class="absolute inset-0 rounded-full border border-gray-100 scale-125 opacity-40 animate-[spin_25s_linear_infinite_reverse]">
+                        </div>
 
                         <!-- Image Frame -->
                         <div
-                            class="relative z-10 overflow-hidden bg-white border border-gray-200 shadow-2xl aspect-[3/4] group">
-                            <!-- NOTE: Image moved to public/profile_v2.png -->
-                            <img src="profile_v2.png" alt="Muhammad Afnan Risandi"
-                                class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
-                                onerror="this.parentElement.innerHTML = '<div class=\'flex flex-col items-center justify-center h-full bg-gray-50 text-gray-400\'><span>Image Removed/Missing</span></div>';">
-
-                            <!-- Overlay Text (Optional) -->
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/60 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                <p class="font-serif-custom text-lg italic">Engineering & Art</p>
-                            </div>
+                            class="relative z-10 overflow-hidden bg-white rounded-full shadow-2xl w-full h-full group border-[8px] border-white ring-1 ring-gray-100">
+                            <img src="profile.png" alt="Muhammad Afnan Risandi"
+                                class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                                onerror="this.src='https://via.placeholder.com/300?text=Afnan';">
+                            <div class="absolute inset-0 rounded-full ring-1 ring-inset ring-black/5"></div>
                         </div>
                     </div>
                 </div>
@@ -167,9 +174,9 @@
                         <div
                             class="grid grid-cols-12 pb-3 mb-6 border-b border-gray-300 text-xs font-mono-custom text-gray-400 uppercase tracking-wider dynamic-entry smooth-entry">
                             <div class="col-span-1">No.</div>
-                            <div class="col-span-6 md:col-span-7">Project Title</div>
-                            <div class="col-span-3 md:col-span-2 text-right md:text-left">Tech Stack</div>
-                            <div class="col-span-2 text-right">Domain</div>
+                            <div class="col-span-6 md:col-span-6">Project Title</div>
+                            <div class="col-span-5 md:col-span-3">Tech Breakdown</div>
+                            <div class="col-span-2 text-right hidden md:block">Domain</div>
                         </div>
 
                         <ul id="project-list" class="flex flex-col">
@@ -280,63 +287,104 @@
 
     </main>
 
-    <footer class="bg-gray-900 text-white mt-24">
-        <div class="content-container py-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-                <div>
-                    <h3 class="text-2xl font-serif-custom mb-6">Mari Terhubung</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya
-                        melalui email, GitHub, atau media sosial lainnya.
+    <footer class="bg-[#0a0a0a] text-white mt-32 relative z-[9999]">
+        <div class="content-container py-24">
+
+            <!-- Top Section: CTA -->
+            <div class="mb-24 border-b border-white/10 pb-16">
+                <h2 class="text-5xl md:text-7xl classical-h1 font-normal leading-tight mb-8">
+                    Let's create something <br>
+                    <span class="italic text-gray-400">extraordinary.</span>
+                </h2>
+                <a href="mailto:muhammadafnanrisandi@gmail.com"
+                    class="inline-flex items-center gap-4 text-2xl md:text-3xl font-serif-custom border-b border-white/30 pb-2 hover:border-white hover:pl-4 transition-all duration-300">
+                    muhammadafnanrisandi@gmail.com
+                    <i class="ph ph-arrow-right font-light"></i>
+                </a>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+
+                <!-- Brand / Ident -->
+                <div class="md:col-span-4">
+                    <h3 class="text-xl font-bold tracking-tight mb-6 mt-1">M / AFNAN . R</h3>
+                    <p class="text-gray-400 font-light leading-relaxed max-w-xs text-sm">
+                        Combining technical precision with artistic intuition to build intelligent, robust, and
+                        beautiful systems.
                     </p>
-                    <div class="space-y-4">
-                        <a href="mailto:muhammadafnanrisandi@gmail.com"
-                            class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
-                            <span class="text-2xl">📧</span>
-                            <span class="group-hover:underline">muhammadafnanrisandi@gmail.com
-                            </span>
-                        </a>
-                        <a href="https://github.com/Rageronee" target="_blank" rel="noopener noreferrer"
-                            class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
-                            <span class="text-2xl">💻</span>
-                            <span class="group-hover:underline">github.com/Rageronee</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/muhammad-afnan-risandi-722066348/" target="_blank"
-                            rel="noopener noreferrer"
-                            class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
-                            <span class="text-2xl">💼</span>
-                            <span class="group-hover:underline">LinkedIn Profile</span>
-                        </a>
-                        <a href="https://www.instagram.com/_ragerone_/" target="_blank" rel="noopener noreferrer"
-                            class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
-                            <span class="text-2xl">📷</span>
-                            <span class="group-hover:underline">Instagram</span>
-                        </a>
-                    </div>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-serif-custom mb-6">Quick Links</h3>
-                    <div class="space-y-4">
-                        <a href="#about" onclick="scrollToSection('about'); return false;"
-                            class="block text-gray-400 hover:text-white transition-colors">Tentang Saya</a>
-                        <a href="#works" onclick="scrollToSection('works'); return false;"
-                            class="block text-gray-400 hover:text-white transition-colors">Projects</a>
-                        <a href="#narrative" onclick="scrollToSection('narrative'); return false;"
-                            class="block text-gray-400 hover:text-white transition-colors">Leadership & Skills</a>
-                        <a href="#archives" onclick="scrollToSection('archives'); return false;"
-                            class="block text-gray-400 hover:text-white transition-colors">Education</a>
-                    </div>
+
+                <!-- Navigation -->
+                <div class="md:col-span-3 md:col-start-6">
+                    <h4 class="text-xs font-mono-custom uppercase tracking-widest text-gray-500 mb-8">Explore</h4>
+                    <ul class="space-y-4 font-serif-custom text-lg text-gray-300">
+                        <li><a href="#statement"
+                                class="hover:text-white hover:italic transition-all inline-block hover:translate-x-2">Home</a>
+                        </li>
+                        <li><a href="#about"
+                                class="hover:text-white hover:italic transition-all inline-block hover:translate-x-2">About</a>
+                        </li>
+                        <li><a href="#works"
+                                class="hover:text-white hover:italic transition-all inline-block hover:translate-x-2">Selected
+                                Works</a></li>
+                        <li><a href="#narrative"
+                                class="hover:text-white hover:italic transition-all inline-block hover:translate-x-2">Leadership</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Socials -->
+                <div class="md:col-span-3">
+                    <h4 class="text-xs font-mono-custom uppercase tracking-widest text-gray-500 mb-8">Connect</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="https://github.com/Rageronee" target="_blank" rel="noopener noreferrer"
+                                class="group flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                                <span class="bg-white/5 p-2 rounded-full group-hover:bg-white/10 transition-colors">
+                                    <i class="ph ph-github-logo text-xl"></i>
+                                </span>
+                                <span
+                                    class="text-sm font-mono-custom group-hover:underline decoration-white/30 underline-offset-4">GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/muhammad-afnan-risandi-722066348/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="group flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                                <span class="bg-white/5 p-2 rounded-full group-hover:bg-white/10 transition-colors">
+                                    <i class="ph ph-linkedin-logo text-xl"></i>
+                                </span>
+                                <span
+                                    class="text-sm font-mono-custom group-hover:underline decoration-white/30 underline-offset-4">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/_ragerone_/" target="_blank" rel="noopener noreferrer"
+                                class="group flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
+                                <span class="bg-white/5 p-2 rounded-full group-hover:bg-white/10 transition-colors">
+                                    <i class="ph ph-instagram-logo text-xl"></i>
+                                </span>
+                                <span
+                                    class="text-sm font-mono-custom group-hover:underline decoration-white/30 underline-offset-4">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
+            <!-- Bottom Bar -->
             <div
-                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-                <p>&copy; 2025 Muhammad Afnan Risandi. All rights reserved.</p>
-                <p class="mt-4 md:mt-0">Engineered with Precision & Structure.</p>
+                class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-gray-500 text-xs font-mono-custom uppercase tracking-wider">
+                <p>&copy; 2026 Muhammad Afnan Risandi. All Rights Reserved.</p>
+                <div class="flex items-center gap-2 mt-4 md:mt-0">
+                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span>Open to Work</span>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

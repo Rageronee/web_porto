@@ -1,4 +1,5 @@
 export const portfolioData = {
+    // Data Proyek Mekatronika & AI (Narrative & Soulful)
     projects: [
         {
             id: 1,
@@ -6,17 +7,17 @@ export const portfolioData = {
             category: "Full Stack Web App",
             year: "2025",
             color: "#000000",
-            tech: "Laravel, PHP, MySQL, Bootstrap",
-            domain: "Web Development / CRM",
             shape: "rect",
-            link: "https://github.com/Rageronee/Grapara-Telkomcel/tree/main",
+            tech: "Laravel • TiDB",
+            domain: "Web App",
+            link: "https://grapara-cs.vercel.app",
             details: {
-                desc: "Sistem aplikasi berbasis web untuk manajemen layanan pelanggan di lingkungan Grapara. Mencakup fitur ticketing, manajemen antrian, dan laporan analitik performa layanan.",
+                desc: "Sebuah ode untuk efisiensi pelayanan. Mengubah antrian yang menjemukan menjadi pengalaman digital yang cair dan responsif. Di sini, humor (plesetan) bertemu dengan keamanan tingkat tinggi, menciptakan sistem yang tidak hanya aman, tapi juga manusiawi.",
                 features: [
-                    "Sistem Ticketing & Antrian Real-time",
-                    "Dashboard Admin & Customer Service",
-                    "Reporting & Analytics",
-                    "User Role Management (Admin, CS, Supervisor)"
+                    "Glassmorphism UI: Transparansi yang menenangkan",
+                    "Security Core: Benteng pertahanan anti-injeksi",
+                    "Realtime Pulse: Detak jantung antrian yang hidup",
+                    "Role-Based Harmony: Orkestrasi akses Admin & User"
                 ]
             }
         },
@@ -25,78 +26,131 @@ export const portfolioData = {
             title: "Sistem Deteksi Kematangan Pisang",
             category: "Computer Vision",
             year: "2024",
-            color: "#FFD700",
-            tech: "JavaScript, HTML, CSS", // Updated as per previous context
-            domain: "Computer Vision / AI",
+            color: "#EF4444",
             shape: "circle",
-            link: "https://github.com/talhaportofolio/Sistem-Deteksi-Kematangan-Pisang",
+            tech: "JS • Vision API",
+            domain: "Computer Vision",
+            link: "https://banana-maturity.vercel.app",
             details: {
-                desc: "Sistem deteksi otomatis tingkat kematangan pisang menggunakan Computer Vision. Mengklasifikasikan pisang ke dalam kategori (Mentah, Matang, Lewat Matang) berdasarkan analisis warna kulit.",
+                desc: "Mata digital yang belajar 'melihat' rasa. Mengajarkan mesin untuk memahami proses alami pematangan buah hanya lewat spektrum warna. Sebuah eksperimen sederhana tentang bagaimana silikon bisa memahami biologi.",
                 features: [
-                    "Real-time Image Processing",
-                    "Color Histogram Analysis",
-                    "Web-based Interface",
-                    "Akurasi klasifikasi tinggi untuk pencahayaan terkontrol"
+                    "Instant Perception: Analisis visual seketika",
+                    "Color Psychology: Menerjemahkan RGB ke level kematangan",
+                    "Lightweight Intelligence: Kecerdasan tanpa beban server"
                 ]
             }
         },
         {
             id: 3,
-            title: "Sistem Monitoring Kompos",
-            category: "IoT + AI System",
-            year: "2025",
-            color: "#4CAF50",
-            tech: "Python, Flask, Firebase, ESP32",
-            domain: "IoT / Smart Farming",
-            shape: "tri",
-            link: "https://monitoring-kompos.vercel.app",
+            title: "Konsultansi Website Percetakan",
+            category: "Full Stack Web Dev",
+            year: "2024",
+            color: "#8B5CF6",
+            shape: "rect",
+            tech: "Next.js • React",
+            domain: "Web App",
+            link: "https://zonaprinting.vercel.app",
             details: {
-                desc: "Solusi IoT lengkap untuk memantau proses pengomposan secara real-time. Dilengkapi dengan AI + Sistem Pakar untuk memprediksi kualitas kompos dan memberikan rekomendasi tindakan.",
+                desc: "Etalase digital bagi para perajin cetak. Bukan sekadar katalog, melainkan jembatan antara ide klien dan tinta printer. Dashboard analitiknya menyingkap cerita di balik angka penjualan.",
                 features: [
-                    "IoT Sensor Integration (Suhu, Kelembaban, pH)",
-                    "AI Prediction Model (Estimasi Waktu Panen)",
-                    "Sistem Pakar (Rekomendasi Tindakan)",
-                    "Dashboard Monitoring Web (IoT + ML + Sistem Pakar)"
+                    "Interactive Gallery: Panggung bagi produk cetak",
+                    "Data Storytelling: Visualisasi metrik bisnis",
+                    "Seamless Order Flow: Aliran pesanan tanpa hambatan"
                 ]
             }
         },
         {
             id: 4,
-            title: "Proyek IMK - Aplikasi Kid Curios",
-            category: "UI/UX Design",
+            title: "Robot Line Follower Otonom",
+            category: "Control System",
             year: "2024",
-            color: "#2196F3",
-            tech: "Figma",
-            domain: "UI/UX / EdTech", // Updated domain guess
-            shape: "rect",
-            link: "https://www.figma.com/proto/...", // Note: User provided truncated link in history, I'll use a placeholder or check history if critical. Keeping generic for now as exact link lost in summary truncation
+            color: "#3B82F6",
+            shape: "tri",
+            tech: "Arduino • PID Control",
+            domain: "Robotics",
+            link: "https://github.com/Rageronee/LN_FOLLOWER_ROBOT",
             details: {
-                desc: "Prototype aplikasi pembelajaran seru tingkat SD mengenai IPA. Didesain dengan pendekatan User-Centered Design untuk meningkatkan engagement siswa.",
+                desc: "Penari di atas garis hitam. Menggunakan algoritma PID untuk menjaga keseimbangan yang presisi antara kecepatan dan akurasi. Robot ini bukan sekadar berjalan, ia 'merasakan' jalurnya.",
                 features: [
-                    "Interactive Learning Modules",
-                    "Gamification Elements",
-                    "Child-friendly UI/UX",
-                    "Prototype Interaktif High-Fidelity"
+                    "PID Algorithm: Matematika kestabilan gerak",
+                    "Rapid Response: Refleks mikrokontroler",
+                    "Path Optimization: Mencari efisiensi dalam kurva"
+                ]
+            }
+        },
+        {
+            id: 5,
+            title: "Monitoring Kematangan Kompos",
+            category: "IoT Environment",
+            year: "2023",
+            color: "#10B981",
+            shape: "rect",
+            tech: "IoT • Machine Learning",
+            domain: "Smart Farming",
+            link: "https://monitoring-kompos.vercel.app",
+            details: {
+                desc: "Menyimak bisikan alam lewat sensor. Sistem ini mendengarkan suhu dan kelembaban, lalu membiarkan AI membisikkan kapan siklus kehidupan kompos telah paripurna. Perpaduan harmonis antara tanah dan *cloud*.",
+                features: [
+                    "Environmental Sensing: Peka terhadap perubahan mikro",
+                    "AI Prediction: Meramal waktu panen",
+                    "Digital Dashboard: Jendela ke proses organik"
+                ]
+            }
+        },
+        {
+            id: 6,
+            title: "Kid Curios: Aplikasi Belajar IPA",
+            category: "HCI & UI/UX",
+            year: "2023",
+            color: "#F59E0B",
+            shape: "arc",
+            tech: "Figma • UX Research • UI Research",
+            domain: "EdTech",
+            link: "https://www.figma.com/proto/l8Wta8jtWyZSKchAWt0WVR/IMK-Kid-Curios?node-id=0-1&t=SosRQk2kVLbcLIJu-1",
+            details: {
+                desc: "Merancang jembatan empati antara kurikulum IPA yang padat dan dunia imajinasi anak-anak. Prototipe ini bukan sekadar desain antarmuka, tapi sebuah studi tentang bagaimana interaksi manusia-komputer bisa memicu rasa ingin tahu.",
+                features: [
+                    "Child-Centric Design: Navigasi intuitif untuk jari kecil",
+                    "Gamification Logic: Belajar yang terasa seperti bermain",
+                    "High-Fidelity Interaction: Simulasi pengalaman native"
+                ]
+            }
+        },
+        {
+            id: 7,
+            title: "Sistem Kendali Lengan Robot",
+            category: "Industrial Auto",
+            year: "2023",
+            color: "#6366F1",
+            shape: "rect",
+            tech: "Dobot • PLC • Conveyor",
+            domain: "Automation",
+            details: {
+                desc: "Koreografi presisi dalam skala milimeter. Mengintegrasikan lengan robot Dobot dengan conveyor belt untuk simulasi industri. Sebuah tarian mekanis yang diatur oleh logika pemrograman yang ketat.",
+                features: [
+                    "Kinematics Mastery: Kontrol gerak presisi",
+                    "System Integration: Harmoni robot dan conveyor",
+                    "Pick & Place Logic: Otomasi tugas repetitif"
                 ]
             }
         }
     ],
+    // Data Organisasi (Expanded & Poetic)
     leadership: [
-        { id: 1, period: "Feb 2025 - Sekarang", role: "Ketua Divisi Kominfo", org: "GAPURA UPI", desc: "Strategic Planning & Team Lead" },
-        { id: 2, period: "Jan 2025 - Sekarang", role: "Ketua Pelaksana Makrab", org: "HIMATRONIKA-AI", desc: "Project Management & Execution" },
-        { id: 3, period: "Mar 2024 - Mar 2025", role: "Staff Divisi Kominfo", org: "GAPURA UPI", desc: "Desain Komunikasi & Publikasi" },
-        { id: 4, period: "Feb 2024 - Nov 2024", role: "Staff Departemen Kominfo", org: "HIMATRONIKA-AI", desc: "Desain Grafis & Konten" }
+        { id: 1, period: "2025 - Present", role: "Head of Social Politics", org: "HIMATRONIKA-AI", desc: "Mengawal isu, merawat kepedulian. Mengorkestrasi gerakan mahasiswa agar selaras dengan napas masyarakat." },
+        { id: 2, period: "2025 - Present", role: "Director of Digital Tech", org: "BEM REMA UPI", desc: "Arsitek transformasi digital. Membangun infrastruktur teknologi untuk akselerasi pergerakan." },
+        { id: 3, period: "2024 - 2025", role: "Creative Comm. Staff", org: "GAPURA UPI", desc: "Menerjemahkan gagasan menjadi visual. Menyampaikan pesan organisasi lewat bahasa desain." },
+        { id: 4, period: "2024 - 2024", role: "Staff Info-Kom", org: "HIMATRONIKA-AI", desc: "Garda terdepan informasi. Mengelola kanal komunikasi dengan estetika dan akurasi." }
     ],
     skills: [
-        { id: 1, focus: "Engineering Software", primary: "Arduino, Proteus, CX Programmer, Fluidsim", secondary: "Dobot, Eagle, TinkerCAD" },
-        { id: 2, focus: "Creative & Design", primary: "Adobe Photoshop, Premiere Pro, After Effects, Illustrator", secondary: "Figma, OBS Studio" },
-        { id: 3, focus: "Code", primary: "Python, C++, C (Embedded), MATLAB", secondary: "TensorFlow, OpenCV, NumPy" },
-        { id: 4, focus: "Systems", primary: "ROS, Arduino/STM32, Raspberry Pi", secondary: "Control Theory, PID, DSP" },
-        { id: 5, focus: "Creative Tech", primary: "Garment Design, Fashion Design, Creative Direction", secondary: "Pattern Making, Textile Design, Brand Identity" },
-        { id: 6, focus: "Academic Focus", primary: "Mekatronika & Kecerdasan Buatan (UPI)", secondary: "Sarjana Teknik, Semester 5" }
+        { id: 1, focus: "Engineering Core", primary: "Arduino, Proteus, PLC (CX), Fluidsim", secondary: "System Control & Instrumentation" },
+        { id: 2, focus: "Creative Arsenal", primary: "Adobe Ps/Pr/Ae/Ai, Figma", secondary: "Visual Storytelling & Branding" },
+        { id: 3, focus: "Code & Logic", primary: "Python, C++, JS, Laravel, MATLAB", secondary: "Fullstack & Embedded Logic" },
+        { id: 4, focus: "Advanced Tech", primary: "ROS, IoT Systems, Computer Vision", secondary: "Future-Ready Tech Stack" },
+        { id: 5, focus: "Artistic", primary: "Fashion Design, Creative Direction", secondary: "Cross-disciplinary Creativity" }
     ],
     education: [
-        { id: 1, name: "Universitas Pendidikan Indonesia (UPI) Kampus di Purwakarta", degree: "Sarjana Teknik – Mekatronika & Kecerdasan Buatan", period: "Agu 2023 – Sekarang", location: "Purwakarta" },
-        { id: 2, name: "SMA Negeri 2 Purwakarta", degree: "MIPA (Matematika dan Ilmu Pengetahuan Alam)", period: "Agu 2020 – Mei 2023", location: "Purwakarta" }
+        { id: 1, name: "Universitas Pendidikan Indonesia", degree: "Sarjana Teknik (Mekatronika & AI)", period: "2023 - Sekarang", location: "Purwakarta, Jawa Barat" },
+        { id: 2, name: "SMA Negeri 2 Purwakarta", degree: "MIPA", period: "2020 - 2023", location: "Purwakarta, Jawa Barat" }
     ]
 };
