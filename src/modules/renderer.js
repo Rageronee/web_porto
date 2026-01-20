@@ -152,7 +152,7 @@ function createDynamicEntry(data, type, index) {
                     <p class="text-gray-900 leading-loose font-serif-custom text-lg italic mb-10 animate-text">
                         "${data.details.desc}"
                     </p>
-                    ${data.link ? `<a href="${data.link}" target="_blank" class="group/link inline-flex items-center gap-4 bg-black text-white px-6 py-3 rounded-none text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition-all shadow-xl hover:shadow-2xl">
+                    ${data.link ? `<a href="${data.link}" target="_blank" rel="noopener noreferrer" class="group/link inline-flex items-center gap-4 bg-black text-white px-6 py-3 rounded-none text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition-all shadow-xl hover:shadow-2xl">
                         Visit Project <i class="ph-bold ph-arrow-right group-hover/link:translate-x-2 transition-transform"></i>
                     </a>` : ''}
                 </div>
