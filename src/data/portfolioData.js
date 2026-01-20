@@ -137,10 +137,10 @@ export const portfolioData = {
     ],
     // Data Organisasi (Expanded & Poetic)
     leadership: [
-        { id: 1, period: "2025 - Present", role: "Head of Social Politics", org: "HIMATRONIKA-AI", desc: "Mengawal isu, merawat kepedulian. Mengorkestrasi gerakan mahasiswa agar selaras dengan napas masyarakat." },
-        { id: 2, period: "2025 - Present", role: "Director of Digital Tech", org: "BEM REMA UPI", desc: "Arsitek transformasi digital. Membangun infrastruktur teknologi untuk akselerasi pergerakan." },
-        { id: 3, period: "2024 - 2025", role: "Creative Comm. Staff", org: "GAPURA UPI", desc: "Menerjemahkan gagasan menjadi visual. Menyampaikan pesan organisasi lewat bahasa desain." },
-        { id: 4, period: "2024 - 2024", role: "Staff Info-Kom", org: "HIMATRONIKA-AI", desc: "Garda terdepan informasi. Mengelola kanal komunikasi dengan estetika dan akurasi." }
+        { id: 1, period: "2025 - Present", role: "Head of Social Politics Departement", org: "HIMATRONIKA-AI", desc: "Mengawal isu, merawat kepedulian. Mengorkestrasi gerakan mahasiswa agar selaras dengan napas masyarakat." },
+        { id: 2, period: "2025 - Present", role: "Director of Digital Tech - Kementrian Kominfo", org: "BEM REMA UPI", desc: "Arsitek transformasi digital. Membangun infrastruktur teknologi untuk akselerasi pergerakan." },
+        { id: 3, period: "2024 - 2025", role: "Staff Kominfo", org: "GAPURA UPI", desc: "Menerjemahkan gagasan menjadi visual. Menyampaikan pesan organisasi lewat bahasa desain." },
+        { id: 4, period: "2024 - 2024", role: "Staff Kominfo", org: "HIMATRONIKA-AI", desc: "Garda terdepan informasi. Mengelola kanal komunikasi dengan estetika dan akurasi." }
     ],
     skills: [
         { id: 1, focus: "Engineering Core", primary: "Arduino, Proteus, PLC (CX), Fluidsim", secondary: "System Control & Instrumentation" },
