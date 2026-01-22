@@ -66,6 +66,7 @@ function createDynamicEntry(data, type, index) {
             <div class="col-span-11 md:col-span-6 relative z-10 pointer-events-none flex items-center gap-4">
                  <i class="ph ${domainIcon} text-xl text-gray-300 transition-colors duration-300"></i>
                  <span class="text-xl md:text-2xl font-medium tracking-tight text-gray-900 group-hover:pl-2 transition-all duration-500 animate-text">${data.title}</span>
+                 <span class="md:hidden text-[10px] text-gray-400 font-mono-custom ml-2 opacity-70 animate-pulse">(Tap for details)</span>
             </div>
             <div class="hidden md:flex col-span-5 md:col-span-3 flex-wrap items-center justify-start relative z-10 pointer-events-none pr-4">
                 ${techBadges}
