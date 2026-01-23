@@ -144,10 +144,10 @@ export const portfolioData = {
     ],
     skills: [
         { id: 1, focus: "Engineering Core", primary: "Arduino, Proteus, PLC (CX), Fluidsim", secondary: "System Control & Instrumentation" },
-        { id: 2, focus: "Creative Arsenal", primary: "Adobe Ps/Pr/Ae/Ai, Figma", secondary: "Visual Storytelling & Branding" },
-        { id: 3, focus: "Code & Logic", primary: "Python, C++, JS, Laravel, MATLAB", secondary: "Fullstack & Embedded Logic" },
-        { id: 4, focus: "Advanced Tech", primary: "ROS, IoT Systems, Computer Vision", secondary: "Future-Ready Tech Stack" },
-        { id: 5, focus: "Artistic", primary: "Fashion Design, Creative Direction", secondary: "Cross-disciplinary Creativity" }
+        { id: 2, focus: "Fullstack Dev", primary: "Next.js, React, Laravel, Node.js, Tailwind", secondary: "Scalable & Modern Web Apps" },
+        { id: 3, focus: "Code & Logic", primary: "Python, C++, JavaScript, MATLAB, SQL", secondary: "Algorithms & Computational Thinking" },
+        { id: 4, focus: "Advanced Tech", primary: "ROS, IoT Systems, Computer Vision, AI", secondary: "Future-Ready Tech Stack" },
+        { id: 5, focus: "Creative & Art", primary: "Figma, Adobe Ps/Pr/Ae/Ai, Fashion Design", secondary: "Visual Storytelling & UI/UX" }
     ],
     education: [
         { id: 1, name: "Universitas Pendidikan Indonesia", degree: "Sarjana Teknik (Mekatronika & AI)", period: "2023 - Sekarang", location: "Purwakarta, Jawa Barat" },
