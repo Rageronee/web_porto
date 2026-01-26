@@ -2,6 +2,25 @@ export const portfolioData = {
     // Data Proyek Mekatronika & AI (Narrative & Soulful)
     projects: [
         {
+            id: 8,
+            title: "Analisis Arsitektur CNN Batik Parang",
+            category: "Artificial Intelligence",
+            year: "2026",
+            color: "#D946EF",
+            shape: "circle",
+            tech: "Python • TensorFlow • Streamlit",
+            domain: "Computer Vision",
+            link: "https://github.com/Rageronee/CNN_BATIK_PARANG",
+            details: {
+                desc: "Sebuah studi komparatif mendalam antara ResNet-50 dan MobileNetV2 untuk klasifikasi motif batik yang sangat mirip (fine-grained). Menggabungkan ketelitian akademis dengan implementasi industri yang modern.",
+                features: [
+                    "Precision Architectures: ResNet-50 (100% Accuracy) vs MobileNetV2",
+                    "Wild Inference: Streamlit app for testing on unseen real-world data",
+                    "Thesis Implementation: Rigorous analysis of F1-Score & Latency trade-offs"
+                ]
+            }
+        },
+        {
             id: 1,
             title: "Grapara Customer Service",
             category: "Full Stack Web App",
