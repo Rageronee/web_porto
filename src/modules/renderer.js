@@ -1,41 +1,95 @@
 // --- RENDERER MODULE ---
 
+// --- RENDERER MODULE ---
+
 export function renderContent(appState) {
     // Render Projects
-    const projectList = document.getElementById('project-list');
-    if (projectList) {
-        projectList.innerHTML = '';
-        appState.projects.forEach((p, i) => {
-            const item = createDynamicEntry(p, 'project', i);
-            projectList.appendChild(item);
-        });
+    if (document.getElementById('project-list')) {
+        renderListWithLimit('project-list', appState.projects, 'project', 5);
     }
 
     // Render Leadership Log
-    const leadershipLog = document.getElementById('leadership-log');
-    if (leadershipLog) {
-        leadershipLog.innerHTML = '';
-        appState.leadership.forEach((l, i) => {
-            leadershipLog.appendChild(createDynamicEntry(l, 'leadership', i));
-        });
+    if (document.getElementById('leadership-log')) {
+        renderListWithLimit('leadership-log', appState.leadership, 'leadership', 3);
     }
 
-    // Render Skills Matrix
-    const skillItems = document.getElementById('skill-items');
-    if (skillItems) {
-        skillItems.innerHTML = '';
-        appState.skills.forEach((s, i) => {
-            skillItems.appendChild(createDynamicEntry(s, 'skill', i));
-        });
+    // Render Committees (New)
+    if (document.getElementById('committee-items')) {
+        renderListWithLimit('committee-items', appState.committees, 'leadership', 3); // Reusing leadership style
+    }
+
+    // Render Skills Matrix (No limit for now, or maybe 5)
+    if (document.getElementById('skill-items')) {
+        renderListWithLimit('skill-items', appState.skills, 'skill', 99);
     }
 
     // Render Education
-    const educationItems = document.getElementById('education-items');
-    if (educationItems) {
-        educationItems.innerHTML = '';
-        appState.education.forEach((e, i) => {
-            educationItems.appendChild(createDynamicEntry(e, 'education', i));
-        });
+    if (document.getElementById('education-items')) {
+        // Education usually doesn't need "See More" if it's short, but let's use the helper for consistency
+        renderListWithLimit('education-items', appState.education, 'education', 99);
+    }
+}
+
+/**
+ * Renders a list with a "See More" button if items exceed the limit.
+ * @param {string} containerId - The ID of the container element.
+ * @param {Array} data - The array of data items.
+ * @param {string} type - The type of item ('project', 'leadership', 'skill', etc.).
+ * @param {number} limit - The number of items to show initially.
+ */
+function renderListWithLimit(containerId, data, type, limit) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    container.innerHTML = '';
+
+    // If data is empty, do nothing
+    if (!data || data.length === 0) return;
+
+    // 1. Render Initial Items
+    const initialItems = data.slice(0, limit);
+    initialItems.forEach((item, i) => {
+        container.appendChild(createDynamicEntry(item, type, i));
+    });
+
+    // 2. Check if we need a "See More" button
+    if (data.length > limit) {
+        const remainingItems = data.slice(limit);
+
+        // Create Button Container
+        const btnContainer = document.createElement('div');
+        btnContainer.className = "w-full flex justify-center mt-8 dynamic-entry smooth-entry";
+        btnContainer.style.transitionDelay = `${0.05 * limit}s`; // Delay after last item
+
+        const btn = document.createElement('button');
+        btn.className = "group inline-flex items-center gap-2 text-xs font-mono-custom uppercase tracking-widest text-gray-500 hover:text-black transition-colors px-4 py-2 border border-gray-200 hover:border-black rounded-full";
+        btn.innerHTML = `
+            <span>View All (${data.length})</span>
+            <i class="ph ph-arrow-down group-hover:translate-y-1 transition-transform"></i>
+        `;
+
+        btn.onclick = () => {
+            // Remove button
+            btnContainer.remove();
+
+            // Render remaining items
+            remainingItems.forEach((item, i) => {
+                // Adjust index for delay calculation logic if needed, 
+                // but usually we want them to appear sequentially after the click
+                const node = createDynamicEntry(item, type, limit + i);
+                // Reset delay to make them appear quickly one by one
+                node.style.transitionDelay = `${0.05 * i}s`;
+                // Ensure they are visible immediately (handled by CSS usually, but class helps)
+
+                container.appendChild(node);
+
+                // Trigger reflow/animation if needed (optional)
+                setTimeout(() => node.classList.add('visible'), 10);
+            });
+        };
+
+        btnContainer.appendChild(btn);
+        container.appendChild(btnContainer);
     }
 }
 

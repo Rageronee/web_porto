@@ -152,5 +152,19 @@ export const portfolioData = {
     education: [
         { id: 1, name: "Universitas Pendidikan Indonesia", degree: "Sarjana Teknik (Mekatronika & AI)", period: "2023 - Sekarang", location: "Purwakarta, Jawa Barat" },
         { id: 2, name: "SMA Negeri 2 Purwakarta", degree: "MIPA", period: "2020 - 2023", location: "Purwakarta, Jawa Barat" }
+    ],
+    // Data Kepanitiaan (New Section)
+    committees: [
+        { id: 1, period: "2025", role: "Kepala Divisi PDD", org: "Senandikala", desc: "Acara Budaya berbagai elemen komunitas bekerja sama dengan Kemenpora di Purwakarta" },
+        { id: 2, period: "2025", role: "Kepala Divisi ACARA", org: "UI/UXPERIENCES", desc: "Proker Kementrian KOMINFO BEM UPI PURWAKARTA, Upgrading Skill Design" },
+        { id: 3, period: "2025", role: "Kepala Divisi PDD", org: "Pancaraya", desc: "Proker Kementrian MIKAT BEM UPI PURWAKARTA, Perlombaan Bakat-bakat" },
+        { id: 4, period: "2025", role: "Kepala Divisi PDD", org: "PLKM", desc: "Pelatihan Kepemimpinan Mahasiswa" },
+        { id: 5, period: "2025", role: "Staff Mentor", org: "NMS", desc: "Normaal Movement School, Sekolah Pergerakan" },
+        { id: 6, period: "2024", role: "Staff Mentor", org: "Mokaku", desc: "Masa Orientasi Kampus Kuliah Umum UPI Purwakarta" },
+        { id: 7, period: "2024", role: "Staff PDD", org: "PEMILU UPI PURWAKARTA", desc: "Pemilihan Umum Mahasiswa UPI Purwakarta" },
+        { id: 8, period: "2024", role: "Staff PDD", org: "ALGORITHMA FEST", desc: "Perlombaan dan Dies Natalis HIMATRONIKA-AI" },
+        { id: 9, period: "2024", role: "Kepala Divisi PDD", org: "METASTRO", desc: "Masa Orientasi Jurusan MKB" },
+        { id: 10, period: "2024", role: "Staff PDD", org: "TUTORIAL", desc: "Orientasi Agama Islam Tingkat Kampus" }
     ]
 };
+
