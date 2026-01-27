@@ -3,8 +3,6 @@
 export function initAnimations() {
     setupScrollObserver();
     initPremiumAnimations(); // Existing hover effects
-    setupScrollObserver();
-    initPremiumAnimations(); // Existing hover effects
     setupSplitText();        // Typography
 }
 
@@ -179,9 +177,20 @@ function setupNetworkAnimation() {
     animate();
 }
 
-// --- SPLIT TEXT ---
 function setupSplitText() {
     const targets = document.querySelectorAll('p, li, h3, h4, .animate-text, .detail-text');
+
+    // Shared Observer for Split Text
+    const splitTextObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, 50);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
 
     targets.forEach(el => {
         if (el.innerText.trim().length === 0 || el.classList.contains('split-text-processed')) return;
@@ -219,30 +228,21 @@ function setupSplitText() {
             }
         });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, 50);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        observer.observe(el);
+        splitTextObserver.observe(el);
     });
+
+    // Shared Observer for Headings
+    const headingObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.4 });
 
     document.querySelectorAll('h2').forEach(h2 => {
         h2.classList.add('reveal-heading');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.4 });
-        observer.observe(h2);
+        headingObserver.observe(h2);
     });
 }
