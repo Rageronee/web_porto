@@ -49,9 +49,9 @@ export const portfolioData = {
             shape: "rect",
             tech: "Tauri • React • Supabase",
             domain: "Web App",
-            link: "https://hiro-marine.vercel.app",
+            link: "https://hiros-marine.vercel.app",
             details: {
-                desc: "Platform konservasi laut berbasis gamifikasi. Menggabungkan misi dunia nyata dengan pengalaman digital imersif untuk memobilisasi 'Operatives' dalam menjaga ekosistem laut. Dilengkapi sistem keamanan ketat dan visual 'Deep Ocean' yang memukau.",
+                desc: "Platform konservasi laut berbasis gamifikasi. Menggabungkan misi dunia nyata dengan pengalaman digital imersif untuk memobilisasi 'Operatives' dalam menjaga ekosistem laut. Dilengkapi dengan visual 'Deep Ocean' yang memukau.",
                 features: [
                     "Strict Auth & Self-Healing: Keamanan berlapis dengan pemulihan profil otomatis",
                     "Admin Command Center: Dashboard pengelolaan misi dan data spesimen laut",
