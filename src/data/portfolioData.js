@@ -41,6 +41,26 @@ export const portfolioData = {
             }
         },
         {
+            id: 9,
+            title: "Hiro's Marine",
+            category: "Desktop & Web App",
+            year: "2024",
+            color: "#000000",
+            shape: "rect",
+            tech: "Tauri • React • Supabase",
+            domain: "Web App",
+            link: "https://hiro-marine.vercel.app",
+            details: {
+                desc: "Platform konservasi laut berbasis gamifikasi. Menggabungkan misi dunia nyata dengan pengalaman digital imersif untuk memobilisasi 'Operatives' dalam menjaga ekosistem laut. Dilengkapi sistem keamanan ketat dan visual 'Deep Ocean' yang memukau.",
+                features: [
+                    "Strict Auth & Self-Healing: Keamanan berlapis dengan pemulihan profil otomatis",
+                    "Admin Command Center: Dashboard pengelolaan misi dan data spesimen laut",
+                    "Gamification Core: Sistem XP, Rank, dan mata uang 'Ocean Shells'",
+                    "Deep Ocean UX: Antarmuka atmosferik dengan elemen glassmorphism responsif"
+                ]
+            }
+        },
+        {
             id: 2,
             title: "Sistem Deteksi Kematangan Pisang",
             category: "Computer Vision",
