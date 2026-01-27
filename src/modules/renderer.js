@@ -158,7 +158,7 @@ function createDynamicEntry(data, type, index) {
                     <p class="text-sm font-serif-custom italic text-gray-700 ml-0 md:ml-7 leading-relaxed animate-text">${data.degree}</p>
                 </div>
                 <div class="w-full md:w-auto text-left md:text-right shrink-0 border-t md:border-t-0 md:border-l border-gray-200 pt-4 md:pt-0 pl-0 md:pl-6 mt-2 md:mt-0">
-                     <span class="block text-xs font-mono-custom text-gray-500 bg-white px-2 py-1 rounded border border-gray-200 inline-block mb-1 shadow-sm animate-text">${data.period}</span>
+                     <span class="block text-xs font-mono-custom text-gray-500 bg-white px-2 py-1 rounded border border-gray-200 mb-1 shadow-sm animate-text">${data.period}</span>
                      <p class="text-xs text-gray-400 flex items-center gap-1 md:justify-end animate-text"><i class="ph-fill ph-map-pin"></i> ${data.location}</p>
                 </div>
             </div>

@@ -1,6 +1,16 @@
+import './styles.css';
 import { portfolioData } from './data/portfolioData.js';
 import { renderContent } from './modules/renderer.js';
 import { initAnimations } from './modules/animations.js';
+
+// Anti-FOUC: Reveal body immediately after styles are imported
+document.body.style.visibility = 'visible';
+document.body.style.opacity = '1';
+
+// Remove transition blocker after fade-in
+setTimeout(() => {
+    document.body.classList.remove('prevent-transition');
+}, 1100);
 
 // Global Scroll Utility (exposed to window for HTML onclicks)
 window.scrollToSection = function (id) {

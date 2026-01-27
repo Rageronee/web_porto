@@ -1,0 +1,567 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Inter', sans-serif;
+    --font-serif-custom: 'Playfair Display', serif;
+    --font-mono-custom: 'IBM Plex Mono', monospace;
+
+    --animate-spin-slow: spin 20s linear infinite;
+    --animate-spin-reverse-slow: spin_reverse 25s linear infinite;
+}
+
+/* Base Typography Setup - FOKUS PADA SERIF KLASIK */
+:root {
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --bg-color: #FAFAFA;
+    --text-color: #111111;
+    --accent-color: #737373;
+    --border-color: #e5e5e5;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    /* Prevent fixed header from covering content */
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent overlapping issues */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+.font-serif-custom {
+    font-family: var(--font-serif);
+}
+
+.font-mono-custom {
+    font-family: var(--font-mono);
+}
+
+.classical-h1 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.05em;
+    font-weight: 400;
+}
+
+/* Layout Grid yang Lebih Lega dan Terpusat */
+.content-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix spacing issues */
+main {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+    margin-top: 0;
+}
+
+section {
+    margin-bottom: 6rem;
+    padding-top: 2rem;
+}
+
+section:last-of-type {
+    margin-bottom: 4rem;
+}
+
+/* Ensure proper spacing between sections */
+#statement {
+    padding-top: 4rem;
+    margin-bottom: 8rem;
+}
+
+#works {
+    margin-bottom: 6rem;
+}
+
+#vision {
+    margin-bottom: 6rem;
+}
+
+#narrative {
+    margin-bottom: 6rem;
+}
+
+#archives {
+    margin-bottom: 4rem;
+}
+
+/* NAVIGATION */
+.glass-nav {
+    background: rgba(250, 250, 250, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+
+/* --- ANIMATION STYLES (PREMIUM ENTRY) --- */
+
+/* Curve Transisi Keren */
+.smooth-entry {
+    transition: all 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Staggered Text Reveal (Hero dan Judul) - Fixed Blur */
+.reveal-text {
+    /* opacity: 0; DISABLE HIDDEN STATE TO FIX BLANK SCREEN */
+    /* transform: translateY(20px); */
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dynamic Entry (List Proyek & Matriks) - Fixed Blur */
+.dynamic-entry {
+    /* opacity: 0; DISABLE HIDDEN STATE TO FIX BLANK SCREEN */
+    /* transform: translateX(-30px); */
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dynamic-entry.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Floating Animation untuk Cards */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient Shimmer Effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+}
+
+
+/* Hover Premium untuk List Proyek - Enhanced */
+.project-item {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease;
+    align-items: center;
+    /* Center items vertically */
+}
+
+/* Badge Style - MINIMALIST REDESIGN */
+.tech-badge {
+    display: inline-block;
+    padding: 0;
+    margin-right: 12px;
+    margin-bottom: 4px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #525252;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    /* Subtle underline */
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+}
+
+.project-item:hover .tech-badge {
+    color: #111;
+    border-color: #111;
+}
+
+.project-item:hover .tech-badge {
+    border-color: #d4d4d4;
+    background-color: #f5f5f5;
+}
+
+.project-item.active {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.project-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+    pointer-events: none;
+}
+
+
+.project-item:hover::before {
+    /* left: 100%; Disable shine effect */
+    display: none;
+}
+
+.project-item:hover {
+    /* transform: translateY(-2px); Disable lift */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); Disable shadow */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Keep slight toggle indication */
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Project Details Dropdown */
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+    opacity: 0;
+    background-color: #FAFAFA;
+    /* Seamless with body */
+}
+
+
+.project-details.expanded {
+    max-height: 1000px;
+    /* Arbitrary large height */
+    opacity: 1;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.project-details-content {
+    padding: 1.5rem 0;
+    margin-left: 8.33%;
+    /* Match column offset approx */
+    margin-right: 2rem;
+}
+
+.visit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #111;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.visit-btn:hover {
+    background-color: #333;
+    transform: translateY(-1px);
+}
+
+.detail-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #737373;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.05em;
+}
+
+.detail-text {
+    font-size: 0.95rem;
+    color: #404040;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    max-width: 65ch;
+}
+
+
+/* Custom Cursor/Preview - Enhanced */
+.project-preview {
+    position: fixed;
+    pointer-events: none;
+    width: 300px;
+    height: 200px;
+    z-index: 50;
+    opacity: 0;
+    transform: scale(0.6) translate(-50%, -50%) rotateY(15deg);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+
+.project-preview.active {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%) rotateY(0deg);
+}
+
+/* Smooth Scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Footer Styles */
+/* Main Content - Lower Z-Index */
+main {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* About Section Photo */
+#about img {
+    transition: transform 0.3s ease;
+}
+
+#about:hover img {
+    transform: scale(1.02);
+}
+
+
+
+/* Smooth scroll indicator */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.scroll-indicator {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Enhanced gradient backgrounds */
+.gradient-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Profile Image Components --- */
+.profile-image-container {
+    padding: 1rem;
+}
+
+.profile-image-container img {
+    /* Ensure high quality rendering */
+    image-rendering: -webkit-optimize-contrast;
+}
+
+
+
+/* @keyframes imageFloat {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+/* --- NETWORK & CYBER EFFECTS --- */
+
+/* Canvas Background */
+#matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Behind everything */
+    pointer-events: none;
+    opacity: 0.6;
+    /* Higher opacity because lines are thin/light */
+}
+
+/* --- HIGH-IMPACT TYPOGRAPHY ANIMATIONS --- */
+
+/* Split Text Reveal (Word by Word) */
+.split-text-container {
+    /* overflow: hidden; Removed to prevent clipping descenders */
+    line-height: 1.5;
+}
+
+.split-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    /* Smooth slide up */
+    /* Premium Bezier Curve */
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.8s ease-out;
+    /* will-change removed for performance */
+}
+
+.split-text-container.visible .split-word {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Expanding Line Heading */
+.reveal-heading {
+    position: relative;
+    display: inline-block;
+}
+
+.reveal-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #111;
+    /* Main text color */
+    transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-heading.visible::after {
+    width: 100%;
+}
+
+/* Typewriter Effect (Applied to specific hero class if used) */
+.typewriter-cursor::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* --- NEW ADDITIONS FOR POLISH --- */
+
+/* Spin Animation for Profile Orbits */
+@keyframes spin {
+    from {
+        transform: rotate(0deg) scale(1.1);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+
+@keyframes spin_reverse {
+    from {
+        transform: rotate(360deg) scale(1.25);
+    }
+
+    to {
+        transform: rotate(0deg) scale(1.25);
+    }
+}
+
+/* Education Item Collision Fix */
+#education-items h4 {
+    white-space: normal;
+    /* Allow wrapping */
+}
+
+/* Typography Animations */
+.char-reveal {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease-out;
+    /* will-change removed for performance */
+}
+
+.typo-container.visible .char-reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.word-reveal {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.8s ease-out;
+    /* will-change removed for performance */
+}
+
+.typo-container.visible .word-reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tracking-widest-custom {
+    letter-spacing: 0.25em;
+}

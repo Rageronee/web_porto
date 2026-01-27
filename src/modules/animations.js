@@ -48,13 +48,23 @@ function initPremiumAnimations() {
     // Magnetic Buttons
     const buttons = document.querySelectorAll('.magnetic-btn');
     buttons.forEach(btn => {
+        let rect = null;
+
+        btn.addEventListener('mouseenter', () => {
+            rect = btn.getBoundingClientRect();
+        });
+
         btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
+            if (!rect) rect = btn.getBoundingClientRect(); // Fallback
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
+
+            // Use requestAnimationFrame for smoother visual updates, though transform doesn't trigger layout
             btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
         });
+
         btn.addEventListener('mouseleave', () => {
+            rect = null;
             btn.style.transform = 'translate(0, 0)';
         });
     });
