@@ -5,13 +5,13 @@ export const portfolioData = {
             id: 8,
             title: "Analisis Arsitektur CNN Batik Parang",
             category: "Artificial Intelligence",
-            year: "2026",
+            year: "2025",
             color: "#D946EF",
             shape: "circle",
             tech: "Python • TensorFlow • Streamlit",
             domain: "Computer Vision",
             link: "https://github.com/Rageronee/CNN_BATIK_PARANG",
-            image: "https://placehold.co/600x400/1a1a1a/white?text=CNN+Batik",
+            image: "/rnmn_pv.avif",
             details: {
                 desc: "Sebuah studi komparatif mendalam antara ResNet-50 dan MobileNetV2 untuk klasifikasi motif batik yang sangat mirip (fine-grained). Menggabungkan ketelitian akademis dengan implementasi industri yang modern.",
                 features: [
@@ -25,13 +25,13 @@ export const portfolioData = {
             id: 1,
             title: "Grapara Customer Service",
             category: "Full Stack Web App",
-            year: "2025",
+            year: "2024",
             color: "#000000",
             shape: "rect",
             tech: "Laravel • TiDB",
             domain: "Web App",
             link: "https://grapara-cs.vercel.app",
-            image: "/gp_preview.png",
+            image: "/grpr_pv.avif",
             details: {
                 desc: "Sebuah ode untuk efisiensi pelayanan. Mengubah antrian yang menjemukan menjadi pengalaman digital yang cair dan responsif. Di sini, humor (plesetan) bertemu dengan keamanan tingkat tinggi, menciptakan sistem yang tidak hanya aman, tapi juga manusiawi.",
                 features: [
@@ -52,7 +52,7 @@ export const portfolioData = {
             tech: "Tauri • React • Supabase",
             domain: "Web App",
             link: "https://hiros-marine.vercel.app",
-            image: "/hm_preview.png",
+            image: "/hrmr_pv.avif",
             details: {
                 desc: "Platform konservasi laut berbasis gamifikasi. Menggabungkan misi dunia nyata dengan pengalaman digital imersif untuk memobilisasi 'Operatives' dalam menjaga ekosistem laut. Dilengkapi dengan visual 'Deep Ocean' yang memukau.",
                 features: [
@@ -67,13 +67,13 @@ export const portfolioData = {
             id: 2,
             title: "Sistem Deteksi Kematangan Pisang",
             category: "Computer Vision",
-            year: "2024",
+            year: "2025",
             color: "#EF4444",
             shape: "circle",
             tech: "JS • Vision API",
             domain: "Computer Vision",
             link: "https://banana-maturity.vercel.app",
-            image: "/psg_preview.png",
+            image: "/psng_pv.avif",
             details: {
                 desc: "Mata digital yang belajar 'melihat' rasa. Mengajarkan mesin untuk memahami proses alami pematangan buah hanya lewat spektrum warna. Sebuah eksperimen sederhana tentang bagaimana silikon bisa memahami biologi.",
                 features: [
@@ -87,13 +87,13 @@ export const portfolioData = {
             id: 3,
             title: "Konsultansi Website Percetakan",
             category: "Full Stack Web Dev",
-            year: "2024",
+            year: "2025",
             color: "#8B5CF6",
             shape: "rect",
             tech: "Next.js • React",
             domain: "Web App",
             link: "https://zonaprinting.vercel.app",
-            image: "/zp_preview.png",
+            image: "/znpr_pv.avif",
             details: {
                 desc: "Etalase digital bagi para perajin cetak. Bukan sekadar katalog, melainkan jembatan antara ide klien dan tinta printer. Dashboard analitiknya menyingkap cerita di balik angka penjualan.",
                 features: [
@@ -107,13 +107,13 @@ export const portfolioData = {
             id: 4,
             title: "Robot Line Follower Otonom",
             category: "Control System",
-            year: "2024",
+            year: "2025",
             color: "#3B82F6",
             shape: "tri",
             tech: "Arduino • PID Control",
             domain: "Robotics",
             link: "https://github.com/Rageronee/LN_FOLLOWER_ROBOT",
-            image: "https://placehold.co/600x400/1a1a1a/white?text=Line+Follower",
+            image: "/flwr_pv.avif",
             details: {
                 desc: "Penari di atas garis hitam. Menggunakan algoritma PID untuk menjaga keseimbangan yang presisi antara kecepatan dan akurasi. Robot ini bukan sekadar berjalan, ia 'merasakan' jalurnya.",
                 features: [
@@ -127,13 +127,13 @@ export const portfolioData = {
             id: 5,
             title: "Monitoring Kematangan Kompos",
             category: "IoT Environment",
-            year: "2023",
+            year: "2025",
             color: "#10B981",
             shape: "rect",
             tech: "IoT • Machine Learning",
             domain: "Smart Farming",
             link: "https://monitoring-kompos.vercel.app",
-            image: "https://placehold.co/600x400/1a1a1a/white?text=Compost+IoT",
+            image: "/kmps_pv.avif",
             details: {
                 desc: "Menyimak bisikan alam lewat sensor. Sistem ini mendengarkan suhu dan kelembaban, lalu membiarkan AI membisikkan kapan siklus kehidupan kompos telah paripurna. Perpaduan harmonis antara tanah dan *cloud*.",
                 features: [
@@ -147,13 +147,13 @@ export const portfolioData = {
             id: 6,
             title: "Kid Curios: Aplikasi Belajar IPA",
             category: "HCI & UI/UX",
-            year: "2023",
+            year: "2025",
             color: "#F59E0B",
             shape: "arc",
             tech: "Figma • UX Research • UI Research",
             domain: "EdTech",
             link: "https://www.figma.com/proto/l8Wta8jtWyZSKchAWt0WVR/IMK-Kid-Curios?node-id=0-1&t=SosRQk2kVLbcLIJu-1",
-            image: "https://placehold.co/600x400/1a1a1a/white?text=Kid+Curios",
+            image: "/kdcr_pv.avif",
             details: {
                 desc: "Merancang jembatan empati antara kurikulum IPA yang padat dan dunia imajinasi anak-anak. Prototipe ini bukan sekadar desain antarmuka, tapi sebuah studi tentang bagaimana interaksi manusia-komputer bisa memicu rasa ingin tahu.",
                 features: [
@@ -167,12 +167,12 @@ export const portfolioData = {
             id: 7,
             title: "Sistem Kendali Lengan Robot",
             category: "Industrial Auto",
-            year: "2023",
+            year: "2025",
             color: "#6366F1",
             shape: "rect",
             tech: "Dobot • PLC • Conveyor",
             domain: "Automation",
-            image: "https://placehold.co/600x400/1a1a1a/white?text=Robot+Arm",
+            image: "/dobt_pv.avif",
             details: {
                 desc: "Koreografi presisi dalam skala milimeter. Mengintegrasikan lengan robot Dobot dengan conveyor belt untuk simulasi industri. Sebuah tarian mekanis yang diatur oleh logika pemrograman yang ketat.",
                 features: [
@@ -185,8 +185,8 @@ export const portfolioData = {
     ],
     // Data Organisasi (Expanded & Poetic)
     leadership: [
-        { id: 1, period: "2025 - Present", role: "Head of Social Politics Departement", org: "HIMATRONIKA-AI", desc: "Mengawal isu, merawat kepedulian. Mengorkestrasi gerakan mahasiswa agar selaras dengan napas masyarakat." },
-        { id: 2, period: "2025 - Present", role: "Director of Digital Tech - Kementrian Kominfo", org: "BEM REMA UPI", desc: "Arsitek transformasi digital. Membangun infrastruktur teknologi untuk akselerasi pergerakan." },
+        { id: 1, period: "2025 - 2026", role: "Head of Social Politics Departement", org: "HIMATRONIKA-AI", desc: "Mengawal isu, merawat kepedulian. Mengorkestrasi gerakan mahasiswa agar selaras dengan napas masyarakat." },
+        { id: 2, period: "2025 - 2026", role: "Director of Digital Tech - Kementrian Kominfo", org: "BEM REMA UPI", desc: "Arsitek transformasi digital. Membangun infrastruktur teknologi untuk akselerasi pergerakan." },
         { id: 3, period: "2024 - 2025", role: "Staff Kominfo", org: "GAPURA UPI", desc: "Menerjemahkan gagasan menjadi visual. Menyampaikan pesan organisasi lewat bahasa desain." },
         { id: 4, period: "2024 - 2024", role: "Staff Kominfo", org: "HIMATRONIKA-AI", desc: "Garda terdepan informasi. Mengelola kanal komunikasi dengan estetika dan akurasi." }
     ],
