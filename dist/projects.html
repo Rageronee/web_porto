@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Muhammad Afnan Risandi</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Anti-FOUC */
+        body {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease-out;
+        }
+
+        body.prevent-transition * {
+            transition: none !important;
+            animation: none !important;
+        }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+  <script type="module" crossorigin src="/assets/main-C6cNSZnx.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-xponFIuQ.css">
+</head>
+
+<body class="prevent-transition antialiased selection:bg-gray-900 selection:text-white transition-colors duration-300">
+
+    <nav class="fixed top-0 w-full z-40 glass-nav border-b border-gray-200/50 transition-all duration-300">
+        <div class="content-container py-5 flex justify-between items-center">
+            <a href="/"
+                class="font-bold tracking-tight text-xs md:text-sm uppercase font-mono-custom reveal-text smooth-entry hover:text-gray-600 transition-colors">
+                <i class="ph ph-arrow-left"></i> Back to Main
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="space-x-8 text-xs md:text-sm font-medium text-gray-600 hidden md:block">
+                <span class="text-black font-bold">PROJECT ARCHIVE</span>
+            </div>
+
+            <a href="/cv.pdf" download
+                class="hidden md:inline-flex px-4 py-2 bg-gray-900 text-white rounded hover:bg-black transition-all reveal-text smooth-entry items-center gap-2">
+                <span class="text-xs font-mono-custom uppercase tracking-wider">Download CV</span>
+                <i class="ph ph-download-simple"></i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="content-container pt-32 pb-24">
+
+        <header class="mb-24">
+            <p class="text-sm text-gray-500 mb-6 font-mono-custom uppercase tracking-[0.2em] reveal-text smooth-entry">
+                Selected Works 2023 — 2026
+            </p>
+            <h1
+                class="text-5xl md:text-8xl classical-h1 font-normal leading-tight text-gray-900 mb-8 reveal-text smooth-entry">
+                Arsip <span class="italic text-gray-500">Projek.</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-600 font-light max-w-2xl leading-relaxed reveal-text smooth-entry"
+                data-delay="0.2s">
+                Turning excessive amounts of coffee and anxiety into code. Here lies the evidence that I
+                eventually fixed the bugs, even if I lost my sanity in the process.
+            </p>
+        </header>
+
+        <section id="all-projects" class="mb-24">
+            <!-- Filter/Sort (Optional for future, static for now) -->
+            <div class="flex justify-between items-end mb-8 border-b border-gray-200 pb-4">
+                <span class="text-xs font-mono-custom text-gray-400 uppercase tracking-widest">Index / Grid View</span>
+                <span class="text-xs font-mono-custom text-gray-400">Sorted by Year (Desc)</span>
+            </div>
+
+            <!-- Grid Container -->
+            <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#0a0a0a] text-white mt-12">
+        <div class="content-container py-24">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs font-mono-custom uppercase tracking-wider">
+                <p>&copy; 2026 Muhammad Afnan Risandi.</p>
+                <a href="/" class="hover:text-white transition-colors mt-4 md:mt-0">Back to Portfolio</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

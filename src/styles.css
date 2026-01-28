@@ -565,3 +565,60 @@ main {
 .tracking-widest-custom {
     letter-spacing: 0.25em;
 }
+
+/* --- PROJECT DETAIL MODAL --- */
+#project-modal {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-content {
+    /* Custom Scrollbar for modal */
+    scrollbar-width: thin;
+    scrollbar-color: #e5e5e5 transparent;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #e5e5e5;
+    border-radius: 20px;
+}
+
+/* Modal Animations */
+.slide-left-enter {
+    animation: slideInLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.slide-right-enter {
+    animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

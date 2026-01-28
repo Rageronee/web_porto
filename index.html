@@ -52,8 +52,6 @@
 
 <body class="prevent-transition antialiased selection:bg-gray-900 selection:text-white transition-colors duration-300">
 
-
-
     <div id="preview-container" class="project-preview hidden lg:flex">
         <canvas id="preview-canvas" width="300" height="200"></canvas>
     </div>
@@ -103,11 +101,24 @@
 
     </nav>
 
-    <main class="content-container">
+    <!-- Full Width Hero Section (Parallax) -->
+    <section id="statement"
+        class="min-h-[95vh] flex flex-col justify-start pt-96 mb-24 relative w-full overflow-hidden">
 
-        <section id="statement" class="min-h-[85vh] flex flex-col justify-center mb-24 relative">
-            <div class="max-w-7xl">
-                <p class="text-sm text-gray-500 mb-10 font-mono-custom uppercase tracking-[0.2em] reveal-text smooth-entry"
+        <!-- Parallax Background (Swiss Brutalist Style) -->
+        <div id="hero-parallax" class="absolute inset-0 z-[-1] select-none pointer-events-none grayscale opacity-60">
+            <!-- Overlay to ensure text readability -->
+            <div class="absolute inset-0 bg-linear-to-b from-white/95 via-white/30 to-white/95 z-10"></div>
+
+            <img src="https://images.unsplash.com/photo-1589867237806-d686d9c9ae12?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Brutalist Texture" class="w-full h-[130%] object-cover object-center will-change-transform"
+                style="transform: translateY(0);">
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="content-container w-full">
+            <div class="max-w-7xl relative z-20">
+                <p class="text-sm text-gray-500 mt-10 mb-5 font-mono-custom uppercase tracking-[0.2em] reveal-text smooth-entry"
                     data-delay="0.0s">Mahasiswa Mekatronika & Kecerdasan Buatan</p>
 
                 <h1
@@ -128,11 +139,13 @@
                             <strong>embedded systems</strong>, dan
                             <strong>computer vision</strong>, siap berkontribusi menciptakan sistem yang holistik.
                         </p>
-                        <div class="mt-8 p-6 bg-gray-50 rounded-lg border-l-4 border-gray-900">
-                            <p class="text-base font-serif-custom italic text-gray-700 mb-2">
+                        <!-- Motto Redesigned: Transparent Glassmorphism -->
+                        <div class="mt-8 p-6 bg-white/40 backdrop-blur-sm rounded-sm border-l-2 border-black">
+                            <p class="text-base font-serif-custom italic text-black mb-2 font-medium">
                                 "Innovation happens when engineering meets creativity."
                             </p>
-                            <p class="text-sm text-gray-500 font-mono-custom">— Personal Motto</p>
+                            <p class="text-xs text-gray-600 font-mono-custom uppercase tracking-wider">— Personal Motto
+                            </p>
                         </div>
                     </div>
 
@@ -146,6 +159,17 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container for Rest of Page -->
+    <main class="content-container"> <span
+            class="block text-xs font-mono-custom text-gray-400 mb-3 uppercase mt-6">Status</span>
+        <p class="text-sm text-gray-900 font-medium">Mencari Peluang Magang/Kerja</p>
+        <p class="text-xs text-gray-500 font-mono-custom">Open to Opportunities</p>
+        </div>
+        </div>
+        </div>
         </section>
 
         <section id="about" class="mb-32">

@@ -11,6 +11,7 @@ export const portfolioData = {
             tech: "Python • TensorFlow • Streamlit",
             domain: "Computer Vision",
             link: "https://github.com/Rageronee/CNN_BATIK_PARANG",
+            image: "https://placehold.co/600x400/1a1a1a/white?text=CNN+Batik",
             details: {
                 desc: "Sebuah studi komparatif mendalam antara ResNet-50 dan MobileNetV2 untuk klasifikasi motif batik yang sangat mirip (fine-grained). Menggabungkan ketelitian akademis dengan implementasi industri yang modern.",
                 features: [
@@ -30,6 +31,7 @@ export const portfolioData = {
             tech: "Laravel • TiDB",
             domain: "Web App",
             link: "https://grapara-cs.vercel.app",
+            image: "/gp_preview.png",
             details: {
                 desc: "Sebuah ode untuk efisiensi pelayanan. Mengubah antrian yang menjemukan menjadi pengalaman digital yang cair dan responsif. Di sini, humor (plesetan) bertemu dengan keamanan tingkat tinggi, menciptakan sistem yang tidak hanya aman, tapi juga manusiawi.",
                 features: [
@@ -50,6 +52,7 @@ export const portfolioData = {
             tech: "Tauri • React • Supabase",
             domain: "Web App",
             link: "https://hiros-marine.vercel.app",
+            image: "/hm_preview.png",
             details: {
                 desc: "Platform konservasi laut berbasis gamifikasi. Menggabungkan misi dunia nyata dengan pengalaman digital imersif untuk memobilisasi 'Operatives' dalam menjaga ekosistem laut. Dilengkapi dengan visual 'Deep Ocean' yang memukau.",
                 features: [
@@ -70,6 +73,7 @@ export const portfolioData = {
             tech: "JS • Vision API",
             domain: "Computer Vision",
             link: "https://banana-maturity.vercel.app",
+            image: "/psg_preview.png",
             details: {
                 desc: "Mata digital yang belajar 'melihat' rasa. Mengajarkan mesin untuk memahami proses alami pematangan buah hanya lewat spektrum warna. Sebuah eksperimen sederhana tentang bagaimana silikon bisa memahami biologi.",
                 features: [
@@ -89,6 +93,7 @@ export const portfolioData = {
             tech: "Next.js • React",
             domain: "Web App",
             link: "https://zonaprinting.vercel.app",
+            image: "/zp_preview.png",
             details: {
                 desc: "Etalase digital bagi para perajin cetak. Bukan sekadar katalog, melainkan jembatan antara ide klien dan tinta printer. Dashboard analitiknya menyingkap cerita di balik angka penjualan.",
                 features: [
@@ -108,6 +113,7 @@ export const portfolioData = {
             tech: "Arduino • PID Control",
             domain: "Robotics",
             link: "https://github.com/Rageronee/LN_FOLLOWER_ROBOT",
+            image: "https://placehold.co/600x400/1a1a1a/white?text=Line+Follower",
             details: {
                 desc: "Penari di atas garis hitam. Menggunakan algoritma PID untuk menjaga keseimbangan yang presisi antara kecepatan dan akurasi. Robot ini bukan sekadar berjalan, ia 'merasakan' jalurnya.",
                 features: [
@@ -127,6 +133,7 @@ export const portfolioData = {
             tech: "IoT • Machine Learning",
             domain: "Smart Farming",
             link: "https://monitoring-kompos.vercel.app",
+            image: "https://placehold.co/600x400/1a1a1a/white?text=Compost+IoT",
             details: {
                 desc: "Menyimak bisikan alam lewat sensor. Sistem ini mendengarkan suhu dan kelembaban, lalu membiarkan AI membisikkan kapan siklus kehidupan kompos telah paripurna. Perpaduan harmonis antara tanah dan *cloud*.",
                 features: [
@@ -146,6 +153,7 @@ export const portfolioData = {
             tech: "Figma • UX Research • UI Research",
             domain: "EdTech",
             link: "https://www.figma.com/proto/l8Wta8jtWyZSKchAWt0WVR/IMK-Kid-Curios?node-id=0-1&t=SosRQk2kVLbcLIJu-1",
+            image: "https://placehold.co/600x400/1a1a1a/white?text=Kid+Curios",
             details: {
                 desc: "Merancang jembatan empati antara kurikulum IPA yang padat dan dunia imajinasi anak-anak. Prototipe ini bukan sekadar desain antarmuka, tapi sebuah studi tentang bagaimana interaksi manusia-komputer bisa memicu rasa ingin tahu.",
                 features: [
@@ -164,6 +172,7 @@ export const portfolioData = {
             shape: "rect",
             tech: "Dobot • PLC • Conveyor",
             domain: "Automation",
+            image: "https://placehold.co/600x400/1a1a1a/white?text=Robot+Arm",
             details: {
                 desc: "Koreografi presisi dalam skala milimeter. Mengintegrasikan lengan robot Dobot dengan conveyor belt untuk simulasi industri. Sebuah tarian mekanis yang diatur oleh logika pemrograman yang ketat.",
                 features: [
